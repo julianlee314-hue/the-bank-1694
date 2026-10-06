@@ -1,0 +1,1698 @@
+[
+  {
+    "n": 1,
+    "year": 1694,
+    "label": "Royal Charter of the Bank of England",
+    "cat": "charter",
+    "kind": "money",
+    "summary": "27 July 1694: William & Mary grant a charter to a private company that will lend £1.2m to fund war with France. The public-good clause still echoes in the Bank’s mission."
+  },
+  {
+    "n": 2,
+    "year": 1694,
+    "label": "Opens at Mercers’ Hall",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "1 August 1694: business begins in rented rooms in Cheapside with ~17 clerks. An experiment in war finance, not yet the ‘Old Lady’."
+  },
+  {
+    "n": 3,
+    "year": 1694,
+    "label": "Sir John Houblon, first Governor",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Houblon’s early years are dominated by government cash needs, new coinage, and accepting public deposits—central banking before the name exists."
+  },
+  {
+    "n": 4,
+    "year": 1695,
+    "label": "Early discounting & Bank Rate",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "From 1695 the Bank’s discount rate becomes a measurable price of liquidity—sticky at first, but already a policy-ish instrument."
+  },
+  {
+    "n": 5,
+    "year": 1696,
+    "label": "Great Recoinage crisis",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Clipped silver is withdrawn; coin shortage hits trade. The young Bank is strained by redemptions while still lending for war."
+  },
+  {
+    "n": 6,
+    "year": 1696,
+    "label": "Newton becomes Warden of the Mint",
+    "cat": "gold",
+    "kind": "both",
+    "summary": "Isaac Newton is appointed Warden (1696) and helps drive the recoinage’s engineering and anti-counterfeiting work—science meets the money stock."
+  },
+  {
+    "n": 7,
+    "year": 1696,
+    "label": "Specie payments under strain",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "War lending plus recoinage pressure brings an early near-death experience: notes vs metal under fiscal stress."
+  },
+  {
+    "n": 8,
+    "year": 1697,
+    "label": "Capital enlargement & tallies",
+    "cat": "charter",
+    "kind": "money",
+    "summary": "The Bank absorbs short-term government paper (tallies), binding it more tightly to national-debt machinery."
+  },
+  {
+    "n": 9,
+    "year": 1698,
+    "label": "Savery’s steam pump patented",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Thomas Savery patents a steam pump for mines—an early industrial power idea that Newcomen will soon make practical."
+  },
+  {
+    "n": 10,
+    "year": 1699,
+    "label": "Newton Master of the Mint",
+    "cat": "gold",
+    "kind": "both",
+    "summary": "Newton becomes Master (1699–1727). He stays a working Mint administrator and counterfeiting hunter while remaining Europe’s celebrity natural philosopher."
+  },
+  {
+    "n": 11,
+    "year": 1707,
+    "label": "Act of Union — one fiscal state",
+    "cat": "charter",
+    "kind": "money",
+    "summary": "England and Scotland unite; London’s debt market becomes the financing engine of a larger British state."
+  },
+  {
+    "n": 12,
+    "year": 1708,
+    "label": "Six-partner rule on note banks",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "Legal scaffolding restrains large partnership banks of issue—early privilege that will evolve toward note monopoly."
+  },
+  {
+    "n": 13,
+    "year": 1711,
+    "label": "South Sea Company chartered",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "A rival debt manager with empire trade privileges (incl. asiento) threatens the Bank’s government-finance franchise. Consol yields spike near war peaks (~8.7% annual average this year)."
+  },
+  {
+    "n": 14,
+    "year": 1711,
+    "label": "War-finance yield peak",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Long British yields around the War of the Spanish Succession hit their early-century high—state credit priced as expensive and scarce."
+  },
+  {
+    "n": 15,
+    "year": 1712,
+    "label": "Newcomen’s atmospheric engine",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Thomas Newcomen’s engine drains mines with atmospheric pressure and steam—first commercially successful heat engine, years before Watt."
+  },
+  {
+    "n": 16,
+    "year": 1713,
+    "label": "Peace of Utrecht & debt overhang",
+    "cat": "war",
+    "kind": "money",
+    "summary": "War ends; the problem shifts from wartime cash to managing a permanent national debt through London markets."
+  },
+  {
+    "n": 17,
+    "year": 1717,
+    "label": "Newton’s mint ratio — de facto gold",
+    "cat": "gold",
+    "kind": "both",
+    "summary": "As Master of the Mint, Newton helps set the guinea toward 21s. Relative metal prices push Britain toward a de facto gold standard."
+  },
+  {
+    "n": 18,
+    "year": 1720,
+    "label": "South Sea scheme beats the Bank",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Parliament chooses the South Sea Company’s debt-conversion plan over the Bank’s rival bid (Feb). Stock price begins its mania climb."
+  },
+  {
+    "n": 19,
+    "year": 1720,
+    "label": "Newton sells South Sea — books a profit",
+    "cat": "markets",
+    "kind": "both",
+    "summary": "In late April Newton liquidates most South Sea holdings (sale orders ~19 & 23 Apr). Odlyzko estimates ~£20,000 profit on the early stake—not the oft-cited £7,000 alone."
+  },
+  {
+    "n": 20,
+    "year": 1720,
+    "label": "Bubble peak, Newton re-enters, crash",
+    "cat": "crisis",
+    "kind": "both",
+    "summary": "Prices soar into summer; Newton appears to rebuy heavily (incl. converting other securities). September collapse. Mid-1721 net worth ~£20k vs ~£30k+ pre-bubble; family lore’s £20k loss is plausible, archival estimate often ~£10–14k opportunity loss."
+  },
+  {
+    "n": 21,
+    "year": 1720,
+    "label": "‘Madness of the people’",
+    "cat": "markets",
+    "kind": "both",
+    "summary": "Earliest sourced version (Spence via Lord Radnor): when asked if the rise would continue, Newton said he ‘could not calculate the madness of the people.’ The ‘motions of the heavenly bodies’ flourish was added by later writers."
+  },
+  {
+    "n": 22,
+    "year": 1721,
+    "label": "Parliamentary inquiry & survivors",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Inquiry exposes fraud and politics. The South Sea model is humbled; the Bank’s government-debt role consolidates."
+  },
+  {
+    "n": 23,
+    "year": 1725,
+    "label": "Partially printed banknotes",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "Notes for £20+ begin with printed denominations (cashier still completes the amount)—standardisation after pure holograph paper."
+  },
+  {
+    "n": 24,
+    "year": 1734,
+    "label": "Threadneedle Street premises",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Purpose-built home on the site the Bank still occupies. Institutional presence becomes architecture."
+  },
+  {
+    "n": 25,
+    "year": 1745,
+    "label": "Jacobite scare & liquidity",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Political shock tests note confidence and City credit as Bonnie Prince Charlie’s rising reaches England."
+  },
+  {
+    "n": 26,
+    "year": 1751,
+    "label": "Consols consolidated",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Scattered perpetual debts are tidied into ‘consols’—the benchmark long bond of the British state for generations."
+  },
+  {
+    "n": 27,
+    "year": 1752,
+    "label": "Calendar reform (Britain skips 11 days)",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Britain adopts the Gregorian calendar. Quiet administrative science that remaps the civic year markets settle on."
+  },
+  {
+    "n": 28,
+    "year": 1756,
+    "label": "Seven Years’ War begins",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Global war financed through London’s debt markets with the Bank at the centre of government cash."
+  },
+  {
+    "n": 29,
+    "year": 1761,
+    "label": "Harrison’s H4 chronometer trial",
+    "cat": "science",
+    "kind": "science",
+    "summary": "John Harrison’s marine chronometer proves longitude at sea is solvable—empire navigation meets precision craft, after the Longitude Prize decades."
+  },
+  {
+    "n": 30,
+    "year": 1763,
+    "label": "Peace of Paris — empire enlarged",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Victory expands British claims; the bill is paid in consols and taxes. Yields ease from wartime pressure."
+  },
+  {
+    "n": 31,
+    "year": 1764,
+    "label": "Hargreaves’s spinning jenny (c.)",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Hand-powered multi-spindle spinning spreads in Lancashire—textile productivity that will demand factories, credit, and cotton trade."
+  },
+  {
+    "n": 32,
+    "year": 1769,
+    "label": "Watt’s separate-condenser patent",
+    "cat": "science",
+    "kind": "science",
+    "summary": "James Watt patents a method to cut steam waste (5 Jan 1769). With Boulton later, it becomes the workhorse of industrial power."
+  },
+  {
+    "n": 33,
+    "year": 1769,
+    "label": "Arkwright’s water frame",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Richard Arkwright’s water-powered spinning patents industrialise yarn—mills, capital, and new labour regimes follow."
+  },
+  {
+    "n": 34,
+    "year": 1772,
+    "label": "Ayr Bank crash",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Scottish failure transmits into London—early modern pattern of regional credit crunch hitting the centre."
+  },
+  {
+    "n": 35,
+    "year": 1775,
+    "label": "American war finance begins",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Fiscal stress rises without yet breaking convertibility; London still prices the empire’s quarrel in sterling debt."
+  },
+  {
+    "n": 36,
+    "year": 1776,
+    "label": "Wealth of Nations + Watt engines at work",
+    "cat": "science",
+    "kind": "both",
+    "summary": "Adam Smith publishes; Boulton & Watt engines start commercial service. Ideas and machines arrive together in the Bank’s century."
+  },
+  {
+    "n": 37,
+    "year": 1781,
+    "label": "Cornwallis surrenders at Yorktown",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Military defeat; the debt remains. Peacemaking will still leave a larger peacetime fiscal state."
+  },
+  {
+    "n": 38,
+    "year": 1783,
+    "label": "Peace of Paris — American independence",
+    "cat": "war",
+    "kind": "money",
+    "summary": "War ends; consol yields stay elevated vs mid-century lows as markets digest lost colonies and debt stock."
+  },
+  {
+    "n": 39,
+    "year": 1788,
+    "label": "Soane appointed Bank architect",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "John Soane begins a 45-year rebuild—fortress walls and interiors that define Threadneedle Street until the 20th century."
+  },
+  {
+    "n": 40,
+    "year": 1793,
+    "label": "War with Revolutionary France",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Military-fiscal state shifts into overdrive; gold drains accelerate toward the Restriction crisis."
+  },
+  {
+    "n": 41,
+    "year": 1796,
+    "label": "Jenner’s cowpox inoculation",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Edward Jenner demonstrates vaccination against smallpox—public-health tech that will reshape labour and cities in the industrial century."
+  },
+  {
+    "n": 42,
+    "year": 1797,
+    "label": "Restriction Period begins",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "26 Feb: Privy Council orders the Bank to stop paying notes in gold after invasion panic drains reserves (~£16m→~£2m in contemporary BoE telling). Wartime paper by necessity."
+  },
+  {
+    "n": 43,
+    "year": 1797,
+    "label": "‘Old Lady of Threadneedle Street’",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Gillray’s ‘Political Ravishment’ caricature of Pitt wooing the Bank’s gold popularises the nickname that sticks."
+  },
+  {
+    "n": 44,
+    "year": 1797,
+    "label": "Low-denomination notes flood out",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "£1 and £2 notes compensate for missing coin—and meet an often-illiterate public, priming a forgery epidemic."
+  },
+  {
+    "n": 45,
+    "year": 1797,
+    "label": "Consol yields near wartime highs",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Annual long yields ~5.9% (BoE/FRED)—markets price invasion risk and paper money together."
+  },
+  {
+    "n": 46,
+    "year": 1800,
+    "label": "National debt on a war footing",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Debt stock climbs toward Waterloo-scale mountains; consols are the thermometer of state survival."
+  },
+  {
+    "n": 47,
+    "year": 1805,
+    "label": "Trafalgar — sea power, debt power",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Naval victory protects trade routes; the fiscal capacity behind the fleet is the Bank’s partnership with Parliament."
+  },
+  {
+    "n": 48,
+    "year": 1810,
+    "label": "Bullion Committee report",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Intellectual fight: is the high price of gold ‘too many notes’? Currency vs banking arguments that will haunt Peel’s generation."
+  },
+  {
+    "n": 49,
+    "year": 1812,
+    "label": "War of 1812 & Continental strain",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Another theatre of expense while Restriction continues—sterling paper finances a world war."
+  },
+  {
+    "n": 50,
+    "year": 1814,
+    "label": "Stephenson’s Blücher locomotive (c.)",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Early steam locomotives appear on colliery lines—railways will soon become both tech boom and securities mania."
+  },
+  {
+    "n": 51,
+    "year": 1815,
+    "label": "Waterloo & the bill for victory",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Victory financed; peacetime politics of returning to gold begins. Yields still ~5% annually."
+  },
+  {
+    "n": 52,
+    "year": 1816,
+    "label": "Coinage Act — gold de jure",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Legal gold standard framed even before full convertibility returns."
+  },
+  {
+    "n": 53,
+    "year": 1819,
+    "label": "Resumption Act (Peel’s first gold push)",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Parliament schedules a return to cash payments—defining 19th-century monetary choice."
+  },
+  {
+    "n": 54,
+    "year": 1821,
+    "label": "Convertibility restored",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Gold payments resume at parity. Restriction ends after 24 years. Classical standard era begins in earnest."
+  },
+  {
+    "n": 55,
+    "year": 1821,
+    "label": "Faraday’s electromagnetic rotation",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Michael Faraday demonstrates the principle of the electric motor—laboratory physics that will later wire markets and messages."
+  },
+  {
+    "n": 56,
+    "year": 1825,
+    "label": "Country-bank panic",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Classic run/liquidation crisis after Latin American and domestic speculation. BoE learns crisis lending under fire."
+  },
+  {
+    "n": 57,
+    "year": 1825,
+    "label": "Stockton & Darlington Railway opens",
+    "cat": "science",
+    "kind": "both",
+    "summary": "First public steam railway—tech that will demand capital markets and, within two decades, a railway mania."
+  },
+  {
+    "n": 58,
+    "year": 1826,
+    "label": "First BoE branches",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "Gloucester opens 19 July 1826 (and others follow)—geographic note control after country-bank failures."
+  },
+  {
+    "n": 59,
+    "year": 1829,
+    "label": "Stephenson’s Rocket wins Rainhill",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Locomotive contest proves speed and reliability—railways become investable technology, not curiosity."
+  },
+  {
+    "n": 60,
+    "year": 1830,
+    "label": "Liverpool & Manchester Railway",
+    "cat": "science",
+    "kind": "both",
+    "summary": "First inter-city passenger steam railway. Capital, land, and labour rearrange around iron schedules."
+  },
+  {
+    "n": 61,
+    "year": 1831,
+    "label": "Faraday discovers electromagnetic induction",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Induction makes generators and dynamos conceivable—the physics under eventual telegraph and power industries."
+  },
+  {
+    "n": 62,
+    "year": 1833,
+    "label": "Bank Charter renewal politics",
+    "cat": "charter",
+    "kind": "money",
+    "summary": "Privileges renegotiated; notes edge toward legal-tender status in England. Public-interest framing hardens."
+  },
+  {
+    "n": 63,
+    "year": 1836,
+    "label": "Mid-cycle credit strains",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Instability in the late 1830s helps motivate the rules of 1844."
+  },
+  {
+    "n": 64,
+    "year": 1837,
+    "label": "Telegraph patents & Cooke–Wheatstone",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Electric telegraphy becomes commercial in Britain—information speed that will change market microstructure."
+  },
+  {
+    "n": 65,
+    "year": 1839,
+    "label": "Daguerreotype / Talbot photography",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Photography is announced to the world—a new way to document crises, people, and the Bank’s own fortress."
+  },
+  {
+    "n": 66,
+    "year": 1844,
+    "label": "Bank Charter Act (Peel’s Act)",
+    "cat": "charter",
+    "kind": "money",
+    "summary": "19 July 1844: Issue vs Banking departments; fiduciary issue capped; path to English note monopoly. Rules over discretion—until panic."
+  },
+  {
+    "n": 67,
+    "year": 1844,
+    "label": "Currency School vs Banking School",
+    "cat": "charter",
+    "kind": "money",
+    "summary": "The Act enshrines bullionist rules. The long argument behind modern central banking is now statute."
+  },
+  {
+    "n": 68,
+    "year": 1844,
+    "label": "Bank Rate cut to 2.5%",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Days after the Act, the Bank cuts rate historically low (never below 4% since founding, per contemporary comment)—new regime, new tools."
+  },
+  {
+    "n": 69,
+    "year": 1845,
+    "label": "Railway Mania peak",
+    "cat": "markets",
+    "kind": "both",
+    "summary": "Parliaments authorise vast railway capital; share frenzy and fraud. Tech boom and securities bubble are the same story."
+  },
+  {
+    "n": 70,
+    "year": 1846,
+    "label": "Repeal of the Corn Laws",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Free-trade turn reshapes prices, politics, and the City’s global role—money meets political economy."
+  },
+  {
+    "n": 71,
+    "year": 1847,
+    "label": "Crisis — Act suspended",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Commercial crash; Chancellor’s letter lets the Bank exceed the fiduciary limit. Proof that 1844 breaks in panic."
+  },
+  {
+    "n": 72,
+    "year": 1847,
+    "label": "Irish Famine & fiscal limits",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Hunger meets monetary orthodoxy debates—empire and sterling rules collide with catastrophe (historians still argue how much the Act constrained relief)."
+  },
+  {
+    "n": 73,
+    "year": 1848,
+    "label": "European revolutions & City nerves",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Political upheaval across the Channel; London prices risk while remaining the settlement centre."
+  },
+  {
+    "n": 74,
+    "year": 1851,
+    "label": "Great Exhibition",
+    "cat": "science",
+    "kind": "both",
+    "summary": "Crystal Palace showcases industrial Britain—tech confidence on a gold-standard stage."
+  },
+  {
+    "n": 75,
+    "year": 1856,
+    "label": "Bessemer converter",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Henry Bessemer’s process enables cheap bulk steel—rail, ships, and bridges get a new material basis."
+  },
+  {
+    "n": 76,
+    "year": 1857,
+    "label": "Global panic hits London",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Atlantic transmission from US failures; Act suspended again. Classical standard under stress."
+  },
+  {
+    "n": 77,
+    "year": 1858,
+    "label": "Discount-window discipline on brokers",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Bank restricts bill brokers’ routine access—early moral-hazard push that will haunt 1866."
+  },
+  {
+    "n": 78,
+    "year": 1858,
+    "label": "First lasting Atlantic cable attempt era",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Transatlantic telegraphy is attempted (success solidifies in the mid-1860s)—markets begin to share news at cable speed."
+  },
+  {
+    "n": 79,
+    "year": 1859,
+    "label": "Darwin’s Origin of Species",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Natural selection published in London. Victorian science’s own ‘shock’—pepper for a money timeline that claims to be about a world, not only ledgers."
+  },
+  {
+    "n": 80,
+    "year": 1860,
+    "label": "Rate politics vs bill brokers",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Conflicts over Bank Rate in dividend season—the politics of the discount window before Bagehot’s book."
+  },
+  {
+    "n": 81,
+    "year": 1861,
+    "label": "US Civil War & cotton famine",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Lancashire distress and Atlantic finance; London remains the clearing house of a divided trade world."
+  },
+  {
+    "n": 82,
+    "year": 1863,
+    "label": "London Underground opens (Metropolitan)",
+    "cat": "science",
+    "kind": "science",
+    "summary": "World’s first underground passenger railway—urban tech financed in the same City that prices consols."
+  },
+  {
+    "n": 83,
+    "year": 1865,
+    "label": "Mendel / Pasteur era biology (select)",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Germ theory and experimental biology mature on the Continent while London’s money markets modernise—parallel revolutions."
+  },
+  {
+    "n": 84,
+    "year": 1866,
+    "label": "Overend, Gurney fails — Black Friday",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "9–10 May: Bank refuses the insolvent discount house; panic follows; Act suspended; Rate to 10%. Defining LOLR stress test."
+  },
+  {
+    "n": 85,
+    "year": 1866,
+    "label": "Transatlantic cable in regular service",
+    "cat": "science",
+    "kind": "both",
+    "summary": "Reliable cable links London and New York—finance and news compress. Same year as Overend: wires and runs together."
+  },
+  {
+    "n": 86,
+    "year": 1866,
+    "label": "Chancellor’s letter & Rate 10%",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Suspension authorises notes beyond gold backing; high Rate is the price of the rules break—doctrine still contested."
+  },
+  {
+    "n": 87,
+    "year": 1869,
+    "label": "Suez Canal opens",
+    "cat": "markets",
+    "kind": "both",
+    "summary": "Shortcut to Asia remaps trade times and insurance—empire logistics that sterling credit underwrites."
+  },
+  {
+    "n": 88,
+    "year": 1870,
+    "label": "Chief Cashier sole note signature",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "George Forbes becomes the only signatory—iconic authority convention still on notes today."
+  },
+  {
+    "n": 89,
+    "year": 1871,
+    "label": "German Empire & gold scramble",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Franco-Prussian settlement and German monetary unification intensify Europe’s move toward gold—London’s standard goes global."
+  },
+  {
+    "n": 90,
+    "year": 1873,
+    "label": "Bagehot’s Lombard Street",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Canonical doctrine: in panic, lend freely on good collateral at a high rate. Theory catches practice."
+  },
+  {
+    "n": 91,
+    "year": 1873,
+    "label": "Maxwell’s Treatise on Electricity",
+    "cat": "science",
+    "kind": "science",
+    "summary": "James Clerk Maxwell states field equations that unify light and electromagnetism—pure science peak of the Victorian century."
+  },
+  {
+    "n": 92,
+    "year": 1873,
+    "label": "Continental / US strains",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "1873 panic waves through Vienna and New York; London as gold settlement centre absorbs transmission."
+  },
+  {
+    "n": 93,
+    "year": 1876,
+    "label": "Bell’s telephone patented",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Telephone era begins—voice at distance joins telegraph in remaking how orders and rumours move."
+  },
+  {
+    "n": 94,
+    "year": 1878,
+    "label": "City of Glasgow Bank failure",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Unlimited-liability shock; joint-stock banking reforms accelerate. Note and deposit trust under gold."
+  },
+  {
+    "n": 95,
+    "year": 1879,
+    "label": "Edison / Swan electric light",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Practical electric lighting races ahead—infrastructure that will need capital on a new scale."
+  },
+  {
+    "n": 96,
+    "year": 1880,
+    "label": "Classical gold standard zenith (c.)",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Sterling/London clearing as global public good—with empire asymmetries. Consol yields grind lower."
+  },
+  {
+    "n": 97,
+    "year": 1882,
+    "label": "Edison’s Pearl Street / electric utilities",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Central-station electricity becomes a business—another industry for City finance to price."
+  },
+  {
+    "n": 98,
+    "year": 1885,
+    "label": "Benz motorwagen / auto dawn",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Petrol carriage patents—future tech still fringe, but the invention pepper belongs on a long money-world timeline."
+  },
+  {
+    "n": 99,
+    "year": 1886,
+    "label": "Goschen conversion of the debt",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Interest on consols cut (toward 2¾ then 2½)—Victorian confidence written into the coupon. Yields ~2.8%."
+  },
+  {
+    "n": 100,
+    "year": 1887,
+    "label": "Michelson–Morley / modern physics cue",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Null ether-drift result unsettles classical physics—science timeline pepper beside a calm consol market."
+  },
+  {
+    "n": 101,
+    "year": 1888,
+    "label": "Kodak camera — snapshot culture",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Mass photography democratises images; crises and crowds will be easier to document than in 1825."
+  },
+  {
+    "n": 102,
+    "year": 1890,
+    "label": "Baring crisis lifeboat",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Lidderdale organises a syndicate rescue of Barings after Argentine exposure—SIFI playbook before the acronym."
+  },
+  {
+    "n": 103,
+    "year": 1890,
+    "label": "Gold drain without announcing a break",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Crisis management protects convertibility without a theatrical rules suspension—confidence theatre matters."
+  },
+  {
+    "n": 104,
+    "year": 1890,
+    "label": "Consol yields ~2.7%",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Despite Baring, annual long yields stay low by 18th-century standards—Victorian ‘cheap money’ world."
+  },
+  {
+    "n": 105,
+    "year": 1891,
+    "label": "Aftermath & Argentine echo",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "International lending risk is priced back into London; the lifeboat’s moral is debated for decades."
+  },
+  {
+    "n": 106,
+    "year": 1894,
+    "label": "First women clerks (Janet Hogarth)",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Hogarth becomes first Superintendent of Women Clerks—labour history inside the fortress."
+  },
+  {
+    "n": 107,
+    "year": 1894,
+    "label": "Bank’s bicentenary quiet confidence",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Two centuries on: the Bank is assumed background of Victorian prosperity—until the next century breaks gold."
+  },
+  {
+    "n": 108,
+    "year": 1895,
+    "label": "Röntgen’s X-rays",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Invisible light that sees through flesh—fin-de-siècle science flourish as consol yields near their Victorian trough."
+  },
+  {
+    "n": 109,
+    "year": 1896,
+    "label": "Consol yields ~2.30% — cheap sterling",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "BoE/FRED annual average ~2.30%: the long decline from wartime 6–8% to Victorian calm is complete. State credit has never looked safer on this chart."
+  },
+  {
+    "n": 110,
+    "year": 1896,
+    "label": "Dow Industrial Average begins (US)",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Charles Dow starts publishing the Industrial Average in New York. London still prices the classical gold world—but US equity modernity now has its own continuous index. (Companion story: The Dow, 1896–2026.)"
+  },
+  {
+    "n": 111,
+    "year": 1897,
+    "label": "Victoria’s Diamond Jubilee & late gold calm",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Empire pageantry atop ~2.5% consol yields. Classical gold-standard sterling still looks permanent—an illusion the next half-century will shatter."
+  },
+  {
+    "n": 112,
+    "year": 1897,
+    "label": "Thomson’s electron & Marconi’s wireless",
+    "cat": "science",
+    "kind": "science",
+    "summary": "J.J. Thomson identifies the electron (Cavendish); Marconi’s radio work accelerates. Physics and telecom begin to remake markets’ information speed."
+  },
+  {
+    "n": 113,
+    "year": 1899,
+    "label": "Boer War finance begins",
+    "cat": "war",
+    "kind": "money",
+    "summary": "South African war expenses hit the Exchequer. Consols tick up from Victorian lows as colonial war meets peacetime debt habits."
+  },
+  {
+    "n": 114,
+    "year": 1901,
+    "label": "Marconi’s Atlantic wireless signal",
+    "cat": "science",
+    "kind": "science",
+    "summary": "December 1901: claimed transatlantic radio “S” from Cornwall to Newfoundland. Empire communication starts escaping the cable monopoly."
+  },
+  {
+    "n": 115,
+    "year": 1902,
+    "label": "Boer War ends — debt digest",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Peace of Vereeniging. War costs absorbed into the gilt market; sterling’s gold link still holds."
+  },
+  {
+    "n": 116,
+    "year": 1903,
+    "label": "Wright Flyer — powered flight",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Kitty Hawk proves controlled powered flight. Within a generation air power and air mail will rewrite logistics and war finance."
+  },
+  {
+    "n": 117,
+    "year": 1907,
+    "label": "US Panic of 1907 hits London",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "New York’s crash transmits through sterling balances and commodity houses. The Bank manages liquidity while gold still rules."
+  },
+  {
+    "n": 118,
+    "year": 1909,
+    "label": "Blériot flies the Channel",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Louis Blériot’s Dover landing collapses the English Channel as a mental moat—and foreshadows air-age vulnerability."
+  },
+  {
+    "n": 119,
+    "year": 1911,
+    "label": "Rutherford’s nuclear atom",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Manchester experiments reframe the atom as mostly empty space with a dense nucleus—physics that will later power both energy and weapons."
+  },
+  {
+    "n": 120,
+    "year": 1914,
+    "label": "July–August financial crisis",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "War outbreak freezes markets; Stock Exchange closes; runs threaten. The Bank and Treasury scramble for emergency liquidity."
+  },
+  {
+    "n": 121,
+    "year": 1914,
+    "label": "Gold convertibility effectively suspended",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Practical end of peacetime gold payments as reserves and confidence buckle. The classical standard cracks in days."
+  },
+  {
+    "n": 122,
+    "year": 1914,
+    "label": "Treasury £1 & 10s notes",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "Currency and Bank Notes Act: government “Bradbury” notes replace gold coin in pockets—war money for a mass public."
+  },
+  {
+    "n": 123,
+    "year": 1914,
+    "label": "War Loan & hidden Bank underwriting",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Huge War Loans finance the Allied effort. Later research shows the Bank quietly absorbed stock to fake “oversubscription” confidence."
+  },
+  {
+    "n": 124,
+    "year": 1916,
+    "label": "Somme year — fiscal total war",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Industrial slaughter meets industrial debt. Consols and War Loans price a conflict with no Victorian precedent."
+  },
+  {
+    "n": 125,
+    "year": 1917,
+    "label": "US enters — sterling’s partner shifts",
+    "cat": "war",
+    "kind": "money",
+    "summary": "American entry and dollar credit reshape Allied finance. London remains the clearing house, but power tilts west."
+  },
+  {
+    "n": 126,
+    "year": 1918,
+    "label": "Armistice — victory & debt mountain",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Fighting stops; the bill does not. National debt and inflated prices set the stage for the bitter gold-parity debate."
+  },
+  {
+    "n": 127,
+    "year": 1918,
+    "label": "Votes for women (partial) & labour politics",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Representation of the People Act widens the franchise. Mass democracy will constrain how hard future Chancellors can squeeze for gold."
+  },
+  {
+    "n": 128,
+    "year": 1919,
+    "label": "Cunliffe Committee: restore gold at parity",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Official orthodoxy: return to pre-war gold parity ASAP. The policy choice that will define the 1920s."
+  },
+  {
+    "n": 129,
+    "year": 1919,
+    "label": "Eddington’s eclipse — relativity confirmed",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Sobral/Principe eclipse observations make Einstein world news. Science’s prestige soars just as monetary orthodoxy digs in."
+  },
+  {
+    "n": 130,
+    "year": 1920,
+    "label": "Montagu Norman becomes Governor",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Norman (Governor 1920–44) personifies interwar central banking—secretive, internationalist, and eventually Treasury-constrained."
+  },
+  {
+    "n": 131,
+    "year": 1920,
+    "label": "Postwar yield spike (~5.4%)",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Long yields jump as inflation, debt overhang, and deflation politics collide. Consols no longer whisper “Victorian calm.”"
+  },
+  {
+    "n": 132,
+    "year": 1922,
+    "label": "BBC begins radio broadcasts",
+    "cat": "science",
+    "kind": "science",
+    "summary": "British Broadcasting Company starts. Mass media will later amplify runs, rumours, and Chancellor speeches in real time."
+  },
+  {
+    "n": 133,
+    "year": 1925,
+    "label": "Return to gold at pre-war parity",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Churchill’s decision: sterling back to $4.86. Keynes warns of overvaluation; export industries pay the price."
+  },
+  {
+    "n": 134,
+    "year": 1925,
+    "label": "Germany’s Locarno moment — paper peace",
+    "cat": "war",
+    "kind": "money",
+    "summary": "European rapprochement on paper while gold orthodoxy rebuilds. Capital flows, not just treaties, hold the system."
+  },
+  {
+    "n": 135,
+    "year": 1926,
+    "label": "General Strike — industrial politics",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Nine-day general strike after coal lockout. Light beat: class conflict as the underside of gold-parity deflation."
+  },
+  {
+    "n": 136,
+    "year": 1928,
+    "label": "Fleming observes penicillin",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Alexander Fleming notices mould killing bacteria at St Mary’s. Medicine’s freeroll will reshape labour, longevity—and wartime survival odds."
+  },
+  {
+    "n": 137,
+    "year": 1928,
+    "label": "Currency & Bank Notes Act consolidates",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "Fiduciary issue rules tidied as the gold exchange world matures—paper still promises metal in principle."
+  },
+  {
+    "n": 138,
+    "year": 1929,
+    "label": "Wall Street Crash ripples to the City",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "October crash starts a global credit unwind. London feels it through commodities, Empire debtors, and confidence."
+  },
+  {
+    "n": 139,
+    "year": 1931,
+    "label": "Sterling crisis & leave gold",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "21 September: Britain abandons the gold standard. The classical project dies; floating sterling begins a new monetary era."
+  },
+  {
+    "n": 140,
+    "year": 1931,
+    "label": "National Government formed",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Political emergency meets financial emergency. Policy shifts from defending parity to managing recovery."
+  },
+  {
+    "n": 141,
+    "year": 1931,
+    "label": "Consols still ~4.4% — then relief",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Annual long yield ~4.4% in the crisis year; 1932 Conversion and cheap money then pull rates down as sterling floats."
+  },
+  {
+    "n": 142,
+    "year": 1932,
+    "label": "War Loan conversion & cheap money",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Massive conversion of 5% War Loan cuts debt service. Bank Rate and gilt yields fall—depression-era monetary easing."
+  },
+  {
+    "n": 143,
+    "year": 1932,
+    "label": "Ottawa & the sterling area",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Imperial preference and a sterling bloc replace gold’s automatic discipline for much of the Empire/Commonwealth."
+  },
+  {
+    "n": 144,
+    "year": 1935,
+    "label": "Watson-Watt radar breakthrough",
+    "cat": "science",
+    "kind": "both",
+    "summary": "British radar work accelerates. Detection tech will matter as much as gold reserves when the next war arrives."
+  },
+  {
+    "n": 145,
+    "year": 1936,
+    "label": "Keynes’s General Theory",
+    "cat": "science",
+    "kind": "both",
+    "summary": "Keynes publishes the book that reframes demand, unemployment, and what central banks & Treasuries think they can do."
+  },
+  {
+    "n": 146,
+    "year": 1939,
+    "label": "WWII war finance begins",
+    "cat": "war",
+    "kind": "money",
+    "summary": "September: Britain at war again. Exchange control, War Loans, and Treasury direction intensify—Bank as agent of total war."
+  },
+  {
+    "n": 147,
+    "year": 1939,
+    "label": "Exchange Control Act toolkit",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Capital and currency controls become the peacetime-to-wartime switchboard for sterling."
+  },
+  {
+    "n": 148,
+    "year": 1940,
+    "label": "Dunkirk & existential fiscal stakes",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Military near-catastrophe; financial survival still runs through US credit, Empire resources, and domestic compulsion."
+  },
+  {
+    "n": 149,
+    "year": 1941,
+    "label": "Lend-Lease — dollar lifeline",
+    "cat": "war",
+    "kind": "money",
+    "summary": "US Lend-Lease eases Britain’s dollar shortage. Victory finance becomes transatlantic, not purely City-centred."
+  },
+  {
+    "n": 150,
+    "year": 1943,
+    "label": "Colossus & Bletchley codebreaking",
+    "cat": "science",
+    "kind": "both",
+    "summary": "Electronic cryptanalysis at Bletchley Park. Computing’s wartime birth sits beside sterling’s wartime controls."
+  },
+  {
+    "n": 151,
+    "year": 1944,
+    "label": "Bretton Woods agreed",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "IMF & World Bank designed; dollar–gold hub replaces sterling’s old centrality. Britain signs into a US-led monetary order."
+  },
+  {
+    "n": 152,
+    "year": 1944,
+    "label": "D-Day — war’s fiscal endgame starts",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Normandy opens the European endgame; planning for reconstruction finance is already underway."
+  },
+  {
+    "n": 153,
+    "year": 1945,
+    "label": "War ends — debt, controls, Labour",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Victory with a exhausted balance sheet. Attlee’s government inherits rationing, debt, and a Bank still privately owned on paper."
+  },
+  {
+    "n": 154,
+    "year": 1945,
+    "label": "Penicillin mass production pays off",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Wartime scale-up of antibiotics saves lives on a statistical scale—science’s dividend from the same years as Bretton Woods."
+  },
+  {
+    "n": 155,
+    "year": 1946,
+    "label": "Bank of England nationalised",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Bank of England Act 1946: private shareholders out; the Bank becomes a public institution. In practice, Treasury primacy was already real."
+  },
+  {
+    "n": 156,
+    "year": 1946,
+    "label": "Keynes dies; postwar settlement hardens",
+    "cat": "institution",
+    "kind": "both",
+    "summary": "April: Keynes dies after negotiating US loans and Bretton Woods details. The intellectual and institutional settlement outlives him."
+  },
+  {
+    "n": 157,
+    "year": 1947,
+    "label": "Convertibility crisis",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Brief restoration of current-account convertibility drains dollars in weeks. Controls slam back; sterling’s weakness is public."
+  },
+  {
+    "n": 158,
+    "year": 1948,
+    "label": "Manchester Baby — stored-program computer",
+    "cat": "science",
+    "kind": "science",
+    "summary": "First working stored-program electronic computer runs in Manchester. UK computing pedigree is real—even as US capital scales the industry."
+  },
+  {
+    "n": 159,
+    "year": 1948,
+    "label": "Marshall Plan dollars arrive",
+    "cat": "war",
+    "kind": "money",
+    "summary": "European Recovery Program eases the dollar gap. Reconstruction finance is American-led; the City adapts."
+  },
+  {
+    "n": 160,
+    "year": 1949,
+    "label": "Sterling devalued to $2.80",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "September devaluation under Stafford Cripps. A blunt admission that wartime/postwar parity hopes were gone."
+  },
+  {
+    "n": 161,
+    "year": 1953,
+    "label": "Watson & Crick — DNA structure",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Cambridge double helix paper. Molecular biology’s founding image—British lab, global science."
+  },
+  {
+    "n": 162,
+    "year": 1956,
+    "label": "Suez & sterling pressure",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Military adventure meets financial reality: US pressure and reserve drains force a climb-down. Politics and the pound intertwined."
+  },
+  {
+    "n": 163,
+    "year": 1956,
+    "label": "Calder Hall — first civil nuclear power",
+    "cat": "science",
+    "kind": "science",
+    "summary": "World’s first commercial-scale nuclear power station opens in Cumbria. Energy tech as national prestige project."
+  },
+  {
+    "n": 164,
+    "year": 1957,
+    "label": "Bank Rate to 7% — crisis hike",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Defence of sterling and inflation fears push Bank Rate sharply higher—stop-go policy in action."
+  },
+  {
+    "n": 165,
+    "year": 1958,
+    "label": "Non-resident convertibility restored",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "External convertibility for non-residents marks a step out of postwar exchange-control darkness (residents still constrained)."
+  },
+  {
+    "n": 166,
+    "year": 1959,
+    "label": "Radcliffe Report on the monetary system",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Committee questions simple money-supply fetishism; emphasises credit, liquidity, and wider financial structure."
+  },
+  {
+    "n": 167,
+    "year": 1959,
+    "label": "M1 motorway opens",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Modern motorway Britain begins—oil, cars, and suburban finance will reshape the real economy the Bank tries to steer."
+  },
+  {
+    "n": 168,
+    "year": 1961,
+    "label": "Basel / IMF support for sterling",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Recurring sterling crises bring central-bank swaps and IMF politics into the open. The reserve-currency burden bites."
+  },
+  {
+    "n": 169,
+    "year": 1965,
+    "label": "Wilson incomes policy & stop-go",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Labour tries to manage wages, growth, and the peg simultaneously. The Bank operates inside a politicised demand-management machine."
+  },
+  {
+    "n": 170,
+    "year": 1967,
+    "label": "Sterling devalued to $2.40",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Wilson’s “pound in your pocket” devaluation. Another forced reset of the external value of sterling."
+  },
+  {
+    "n": 171,
+    "year": 1967,
+    "label": "Pulsars discovered (Cambridge)",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Jocelyn Bell Burnell / Hewish detect pulsars—radio astronomy triumph from British instruments."
+  },
+  {
+    "n": 172,
+    "year": 1968,
+    "label": "Gold Pool collapses",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "Two-tier gold market ends the official Gold Pool defence. Bretton Woods’ gold leg is limping."
+  },
+  {
+    "n": 173,
+    "year": 1969,
+    "label": "Concorde first flight",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Anglo-French supersonic prototype flies. Prestige tech with a bill that mirrors other national champions."
+  },
+  {
+    "n": 174,
+    "year": 1969,
+    "label": "Apollo 11 — Moon landing",
+    "cat": "science",
+    "kind": "science",
+    "summary": "US moonshot captures the world’s attention. Tech optimism peaks just as the monetary order is about to break."
+  },
+  {
+    "n": 175,
+    "year": 1971,
+    "label": "Competition & Credit Control",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "CCC reforms aim to replace ceilings with market-based credit control—and unleash competition among banks."
+  },
+  {
+    "n": 176,
+    "year": 1971,
+    "label": "Decimal Day",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "15 February: pounds, shillings, pence become decimal. Everyday money units finally modernise."
+  },
+  {
+    "n": 177,
+    "year": 1971,
+    "label": "Nixon shock — Bretton Woods ends",
+    "cat": "gold",
+    "kind": "money",
+    "summary": "US closes the gold window. The dollar–gold hub dies; floating rates and inflation become the new normal."
+  },
+  {
+    "n": 178,
+    "year": 1972,
+    "label": "Sterling floats",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Pound leaves the Smithsonian tunnel toward a float. Exchange-rate politics replace gold orthodoxy for good."
+  },
+  {
+    "n": 179,
+    "year": 1973,
+    "label": "UK joins the EEC",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "European Economic Community membership begins. Trade and later ERM politics will haunt sterling strategy."
+  },
+  {
+    "n": 180,
+    "year": 1973,
+    "label": "Oil shock & secondary banking crisis starts",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Oil prices explode; property/fringe-bank excesses unwind. The Bank’s “lifeboat” for secondary banks begins."
+  },
+  {
+    "n": 181,
+    "year": 1974,
+    "label": "Secondary banking lifeboat deepens",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Fringe banks and property loans keep failing. The Bank coordinates rescues while inflation accelerates."
+  },
+  {
+    "n": 182,
+    "year": 1975,
+    "label": "Inflation peak — consols ~14.6%",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Long yields scream into the mid-teens. The Victorian 2% world is a museum piece; inflation dominates the chart."
+  },
+  {
+    "n": 183,
+    "year": 1975,
+    "label": "Secondary crisis winds down",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Lifeboat operations gradually stabilise the fringe. Regulatory lessons feed later supervision debates."
+  },
+  {
+    "n": 184,
+    "year": 1976,
+    "label": "IMF crisis — Britain borrows",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Sterling crisis forces an IMF programme. National humiliation narrative meets monetary conditionality."
+  },
+  {
+    "n": 185,
+    "year": 1976,
+    "label": "Concorde enters commercial service",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Supersonic passenger service begins—glamour tech against a backdrop of IMF austerity politics."
+  },
+  {
+    "n": 186,
+    "year": 1978,
+    "label": "Winter of Discontent begins",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Strikes and unburied rubbish become the political symbol of 1970s breakdown—framing Thatcher’s 1979 win."
+  },
+  {
+    "n": 187,
+    "year": 1979,
+    "label": "Thatcher wins — monetarist turn",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Conservative government elevates money-supply targets and disinflation. The Bank’s operating world changes."
+  },
+  {
+    "n": 188,
+    "year": 1979,
+    "label": "Exchange controls abolished",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "End of postwar capital controls. Sterling and the City reopen to global capital flows."
+  },
+  {
+    "n": 189,
+    "year": 1980,
+    "label": "Medium-Term Financial Strategy",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "MTFS publishes money and fiscal paths. Monetarism as published dashboard—even when targets prove slippery."
+  },
+  {
+    "n": 190,
+    "year": 1980,
+    "label": "Consol yields still ~12%",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Disinflation is painful: long rates remain in double digits even as policy turns. The chart’s mountain is still high."
+  },
+  {
+    "n": 191,
+    "year": 1981,
+    "label": "BBC Micro & home computing boom",
+    "cat": "science",
+    "kind": "science",
+    "summary": "BBC Computer Literacy Project puts micros into schools and bedrooms—UK tech culture wave."
+  },
+  {
+    "n": 192,
+    "year": 1981,
+    "label": "Reserve-ratio regime loosened",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Formal reserve requirements fade further as market operations dominate liquidity management."
+  },
+  {
+    "n": 193,
+    "year": 1984,
+    "label": "Miners’ strike — politics of disinflation",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Year-long strike becomes the hinge of industrial power vs monetary/fiscal resolve. Light beat only."
+  },
+  {
+    "n": 194,
+    "year": 1984,
+    "label": "Domain Name System & networked PCs",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Internet naming and personal computers mature together—plumbing for the later WWW boom."
+  },
+  {
+    "n": 195,
+    "year": 1985,
+    "label": "Plaza Accord — dollar/sterling politics",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "G5 intervention agreement to weaken the dollar. Exchange-rate management among majors is back in vogue."
+  },
+  {
+    "n": 196,
+    "year": 1986,
+    "label": "Big Bang — City deregulation",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "27 October: fixed commissions, open outcry, and clubby ownership rules explode. Electronic trading and universal banks remake London."
+  },
+  {
+    "n": 197,
+    "year": 1986,
+    "label": "Single European Act signed",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Deeper EC market integration—background pressure toward ERM and eventual euro debates."
+  },
+  {
+    "n": 198,
+    "year": 1987,
+    "label": "Black Monday crash",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Global equity crash. Central banks ease; the City’s post–Big Bang machine gets its first stress test."
+  },
+  {
+    "n": 199,
+    "year": 1987,
+    "label": "Lawson boom accelerates",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Credit and house prices surge. Shadowing the Deutschmark and late-80s optimism set up the ERM trap."
+  },
+  {
+    "n": 200,
+    "year": 1989,
+    "label": "Tim Berners-Lee proposes the WWW",
+    "cat": "science",
+    "kind": "science",
+    "summary": "At CERN, a British engineer drafts the World Wide Web. Information costs for markets are about to collapse again."
+  },
+  {
+    "n": 201,
+    "year": 1989,
+    "label": "Berlin Wall falls — geopolitics shift",
+    "cat": "war",
+    "kind": "money",
+    "summary": "Cold War’s European endgame. Capital, Germany, and ERM politics will all feel the aftershock."
+  },
+  {
+    "n": 202,
+    "year": 1990,
+    "label": "Sterling joins the ERM",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "October: pound enters the Exchange Rate Mechanism. A hard external constraint returns—without gold’s old mystique."
+  },
+  {
+    "n": 203,
+    "year": 1990,
+    "label": "Thatcher resigns",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Leadership crisis ends the Thatcher era; Major inherits ERM membership and a slowing boom."
+  },
+  {
+    "n": 204,
+    "year": 1991,
+    "label": "BCCI closed by the Bank",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "Bank of Credit and Commerce International shut. Supervision credibility and “home/host” gaps under scrutiny."
+  },
+  {
+    "n": 205,
+    "year": 1991,
+    "label": "WWW software released publicly",
+    "cat": "science",
+    "kind": "science",
+    "summary": "Berners-Lee’s tools go public—the web leaves the lab. Within years, markets will trade on browser time."
+  },
+  {
+    "n": 206,
+    "year": 1992,
+    "label": "Black Wednesday — exit ERM",
+    "cat": "crisis",
+    "kind": "money",
+    "summary": "16 September: speculative attack forces Britain out of the ERM. Billions spent; Bank Rate hiked then reversed. Credibility crisis."
+  },
+  {
+    "n": 207,
+    "year": 1992,
+    "label": "Bank Rate spike then retreat",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Emergency Rate rises fail to defend the peg; policy pivots to floating and later inflation targeting."
+  },
+  {
+    "n": 208,
+    "year": 1992,
+    "label": "Consol yields ~9.2% — post-crisis easing path",
+    "cat": "markets",
+    "kind": "money",
+    "summary": "Long yields still high vs Victorian history, but the inflation mountain is descending from the 1970s peak."
+  },
+  {
+    "n": 209,
+    "year": 1993,
+    "label": "Inflation-targeting framework begins",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Post-ERM regime: explicit inflation target and warmer Bank–Treasury reporting. Prelude to operational independence."
+  },
+  {
+    "n": 210,
+    "year": 1994,
+    "label": "Tricentenary — 300 years of the Bank",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "July 1994: tercentenary symposium, St Paul’s thanksgiving with the Queen, commemorative £2. The Old Lady marks three centuries."
+  },
+  {
+    "n": 211,
+    "year": 1994,
+    "label": "Houblon £50 note issued",
+    "cat": "notes",
+    "kind": "money",
+    "summary": "Commemorative £50 featuring first Governor Sir John Houblon—bookend to 1694’s charter story."
+  },
+  {
+    "n": 212,
+    "year": 1994,
+    "label": "Next: path to operational independence",
+    "cat": "institution",
+    "kind": "money",
+    "summary": "Epilogue card only: full operational independence arrives in 1997 under Brown—just outside this timeline’s frame. The tricentenary Bank is still Treasury’s agent on rates."
+  }
+]

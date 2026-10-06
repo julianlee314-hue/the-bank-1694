@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="The Bank, 1694–1994: three centuries of the Bank of England — wars, panics, gold, and the long rate of money, with science and tech alongside.">
+<title>The Bank, 1694–1994</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f3f5f1;
+  --panel: #fbfcfa;
+  --ink: #14231c;
+  --ink-2: #44554c;
+  --muted: #6f7f77;
+  --rule: #d5dcd4;
+  --accent: #1f5c43;
+  --accent-soft: #e2ebe4;
+  --band: #e6ebe4;
+  --pos: #1d7a46;
+  --neg: #b3261e;
+  --c-charter: #1f5c43;
+  --c-war: #eb6834;
+  --c-crisis: #b3261e;
+  --c-gold: #c9a227;
+  --c-notes: #2a78d6;
+  --c-markets: #5b4bc4;
+  --c-institution: #1baf7a;
+  --c-science: #00839a;
+  --f-display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --f-body: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: clamp(2rem, 5vw, 3.25rem);
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1612; --panel: #151e19; --ink: #e6ede8; --ink-2: #b2c0b7; --muted: #82938a;
+    --rule: #28352e; --accent: #82c9a6; --accent-soft: #1c2b23; --band: #18231d;
+    --pos: #5cc08a; --neg: #f07167;
+    --c-charter: #82c9a6; --c-war: #d95926; --c-crisis: #f07167; --c-gold: #d4b84a;
+    --c-notes: #3987e5; --c-markets: #8b7ae8; --c-institution: #199e70; --c-science: #2ab0c4;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: var(--step-0); line-height: 1.55; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 56px; display: grid; gap: 22px; }
+@media (min-width: 720px) { .wrap { padding-inline: 32px; } }
+header { display: grid; gap: 6px; }
+.eyebrow { font-family: var(--f-mono); font-size: var(--step--1); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--f-display); font-weight: 500; font-size: var(--step-3); line-height: 1.02; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+h1 em { font-style: italic; color: var(--accent); }
+.lede { margin: 4px 0 0; max-width: 72ch; color: var(--ink-2); }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; border-block: 1px solid var(--rule); padding-block: 10px; }
+.group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.group-label { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.chip { font: 500 var(--step--1)/1 var(--f-body); color: var(--ink-2); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 7px 11px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.chip:hover { border-color: var(--muted); color: var(--ink); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip .sw { width: 9px; height: 9px; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 1.5px var(--panel); }
+.chip.cat[aria-pressed="false"], .chip.kind[aria-pressed="false"] { opacity: 0.45; }
+.chip.cat[aria-pressed="true"], .chip.kind[aria-pressed="true"] { background: transparent; color: var(--ink); border-color: var(--muted); }
+.toggle { font: 500 var(--step--1)/1 var(--f-body); color: var(--ink-2); display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: 1px solid var(--rule); border-radius: 999px; padding: 7px 12px; }
+.toggle input { accent-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.stage { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 980px) { .stage { grid-template-columns: minmax(0, 1fr) 340px; align-items: start; } }
+.chart-box { position: relative; min-width: 0; }
+#chart { display: block; width: 100%; touch-action: manipulation; }
+#chart text { font-family: var(--f-mono); fill: var(--muted); font-size: 11px; }
+#chart .grid line { stroke: var(--rule); stroke-width: 1; }
+#chart .axis path { display: none; }
+#chart .axis line { stroke: var(--rule); }
+#chart .yield { fill: none; stroke: var(--ink); stroke-width: 1.7; stroke-linejoin: round; }
+#chart .bank { fill: none; stroke: var(--accent); stroke-width: 1.4; stroke-dasharray: 4 3; stroke-linejoin: round; opacity: 0.85; }
+#chart .area { fill: url(#areaGrad); }
+#chart .dot { stroke: var(--panel); stroke-width: 1.75; cursor: pointer; }
+#chart .dot.dim { opacity: 0.16; }
+#chart .sel-ring { fill: none; stroke: var(--ink); stroke-width: 2; pointer-events: none; }
+#chart .sel-line, #chart .hover-line { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 2 3; pointer-events: none; }
+#chart .gap-band { fill: var(--band); opacity: 0.55; }
+#chart .gap-label { font-family: var(--f-display); font-style: italic; font-size: 12px; fill: var(--ink-2); }
+.tip { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; font-size: var(--step--1); line-height: 1.35; box-shadow: 0 6px 18px rgb(0 0 0 / 0.12); max-width: 260px; z-index: 2; }
+.tip b { font-family: var(--f-mono); font-weight: 500; }
+.tip .t-ev { color: var(--ink-2); margin-top: 4px; }
+.hint { font-size: var(--step--1); color: var(--muted); margin: 6px 0 0; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 20px 20px 18px; display: grid; gap: 12px; min-width: 0; }
+@media (min-width: 980px) { .card { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); } }
+.card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.ev-no { font-family: var(--f-mono); font-size: var(--step--1); color: var(--muted); text-align: right; }
+.ev-year { font-family: var(--f-display); font-weight: 700; font-size: 3.25rem; line-height: 0.9; font-variant-numeric: lining-nums; }
+.ev-cat { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.ev-cat .sw { width: 9px; height: 9px; border-radius: 50%; }
+.badge { font-family: var(--f-mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px solid var(--rule); border-radius: 999px; padding: 3px 8px; color: var(--muted); }
+.ev-label { font-family: var(--f-display); font-size: var(--step-1); font-weight: 500; line-height: 1.3; margin: 0; text-wrap: balance; }
+.ev-sum { margin: 0; color: var(--ink-2); }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.stat { background: var(--panel); padding: 8px 10px; display: grid; gap: 2px; min-width: 0; }
+.stat span { font-family: var(--f-mono); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.stat b { font-family: var(--f-mono); font-weight: 500; font-variant-numeric: tabular-nums; font-size: var(--step-0); overflow-wrap: anywhere; }
+.nav { display: flex; gap: 8px; }
+.nav button { flex: 1; font: 500 var(--step--1) var(--f-body); background: transparent; color: var(--ink); border: 1px solid var(--rule); border-radius: 6px; padding: 9px 10px; cursor: pointer; }
+.nav button:hover:not(:disabled) { border-color: var(--muted); }
+.nav button:disabled { opacity: 0.4; cursor: default; }
+.year-cycle { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.year-cycle button { font: 500 0.72rem var(--f-mono); background: var(--accent-soft); color: var(--ink); border: 1px solid var(--rule); border-radius: 999px; padding: 5px 9px; cursor: pointer; }
+.year-cycle button[aria-current="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.ai-note { font-size: 0.75rem; color: var(--muted); margin: 0; }
+.register { display: grid; gap: 14px; }
+.reg-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 10px; }
+h2 { font-family: var(--f-display); font-weight: 500; font-size: var(--step-2); margin: 0; }
+#q { font: var(--step-0) var(--f-body); color: var(--ink); background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 12px; width: min(100%, 300px); }
+#q::placeholder { color: var(--muted); }
+.decades { display: grid; gap: 4px 28px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); }
+.decade { display: grid; gap: 0; align-content: start; min-width: 0; }
+.decade h3 { font-family: var(--f-mono); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.1em; color: var(--muted); margin: 12px 0 2px; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+.row { display: grid; grid-template-columns: 2.4em 3.2em 10px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; text-align: left; background: none; border: 0; border-radius: 4px; padding: 5px 6px; color: var(--ink); font: var(--step--1)/1.35 var(--f-body); cursor: pointer; width: 100%; }
+.row:hover { background: var(--accent-soft); }
+.row[aria-current="true"] { background: var(--ink); color: var(--bg); }
+.row[aria-current="true"] .r-n, .row[aria-current="true"] .r-y, .row[aria-current="true"] .r-k { color: var(--bg); }
+.row .r-n { font-family: var(--f-mono); color: var(--muted); text-align: right; }
+.row .r-y { font-family: var(--f-mono); font-weight: 500; color: var(--ink-2); }
+.row .sw { width: 8px; height: 8px; border-radius: 50%; align-self: center; }
+.row .r-k { font-family: var(--f-mono); font-size: 0.65rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.empty { color: var(--muted); }
+.about { border-top: 1px solid var(--rule); padding-top: 18px; display: grid; gap: 8px; max-width: 90ch; color: var(--ink-2); }
+.about a { color: var(--accent); }
+footer { border-top: 1px solid var(--rule); padding-top: 14px; font-size: var(--step--1); color: var(--muted); display: grid; gap: 6px; max-width: 90ch; }
+footer p { margin: 0; }
+footer a { color: var(--ink-2); }
+.loading, .error { font-family: var(--f-mono); color: var(--muted); padding: 40px 0; }
+.error { color: var(--neg); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="app">
+  <div class="loading" id="boot">Loading ledger…</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const CATS = [
+  { key: "charter", name: "Charter" },
+  { key: "war", name: "War" },
+  { key: "crisis", name: "Crisis" },
+  { key: "gold", name: "Gold" },
+  { key: "notes", name: "Notes" },
+  { key: "markets", name: "Markets" },
+  { key: "institution", name: "Institution" },
+  { key: "science", name: "Science" }
+];
+const KINDS = [
+  { key: "money", name: "Money" },
+  { key: "science", name: "Science" },
+  { key: "both", name: "Both" }
+];
+const ERAS = [
+  { name: "All years", d: [1694, 1994.5] },
+  { name: "1694–1763", d: [1694, 1763.5] },
+  { name: "1763–1844", d: [1763, 1844.5] },
+  { name: "1844–1914", d: [1844, 1914.5] },
+  { name: "1914–1994", d: [1914, 1994.5] }
+];
+
+const catColor = k => `var(--c-${k})`;
+const catName = k => (CATS.find(c => c.key === k) || { name: k }).name;
+const fmtPct = v => v == null || Number.isNaN(v) ? "—" : d3.format(".2f")(v) + "%";
+
+async function loadJSON(path) {
+  const r = await fetch(path);
+  if (!r.ok) throw new Error(path + " " + r.status);
+  return r.json();
+}
+
+Promise.all([loadJSON("data/events.json"), loadJSON("data/series.json")])
+  .then(([EVENTS, SERIES]) => boot(EVENTS, SERIES))
+  .catch(err => {
+    document.getElementById("boot").className = "error";
+    document.getElementById("boot").textContent = "Could not load data/ via fetch. Serve over http (python3 -m http.server) or open on GitHub Pages. " + err.message;
+  });
+
+function boot(EVENTS, SERIES) {
+  const consol = SERIES.consol;
+  const bankRate = SERIES.bankRate;
+  const consolMap = new Map(consol.map(d => [d[0], d[1]]));
+  const bankMap = new Map(bankRate.map(d => [d[0], d[1]]));
+  const byYear = d3.group(EVENTS, d => d.year);
+  EVENTS.forEach(e => {
+    e.v = consolMap.has(e.year) ? consolMap.get(e.year) : null;
+    e.bank = bankMap.has(e.year) ? bankMap.get(e.year) : null;
+    e.siblings = byYear.get(e.year);
+    e.sibIndex = e.siblings.findIndex(x => x.n === e.n);
+  });
+
+  const app = document.getElementById("app");
+  app.innerHTML = `
+  <header>
+    <div class="eyebrow">Bank of England · 1694–1994 · long UK yield %</div>
+    <h1>Three centuries of the Bank — <em>wars, panics, gold, and the long rate of money</em></h1>
+    <p class="lede">Each marker is a beat in the Bank’s story, with science and tech peppered beside finance and geopolitics. The line is the annual long UK government / consol gilt yield (FRED LTCYUKA). Toggle Bank Rate to compare the policy rate.</p>
+  </header>
+
+  <div class="controls">
+    <div class="group" id="eras" role="group" aria-label="Zoom to era"><span class="group-label">Era</span></div>
+    <div class="group" id="toggles" role="group" aria-label="Series">
+      <label class="toggle"><input type="checkbox" id="showBank"> Bank Rate compare</label>
+    </div>
+  </div>
+  <div class="controls" style="border-top:0;padding-top:0">
+    <div class="group" id="cats" role="group" aria-label="Event categories"><span class="group-label">Category</span></div>
+  </div>
+  <div class="controls" style="border-top:0;padding-top:0">
+    <div class="group" id="kinds" role="group" aria-label="Event kinds"><span class="group-label">Kind</span></div>
+  </div>
+
+  <div class="stage">
+    <div class="chart-box" id="chartBox">
+      <svg id="chart" role="img" aria-label="Long UK government yield percent from 1703 to 1994 with clickable events from 1694"></svg>
+      <div class="tip" id="tip" hidden></div>
+      <p class="hint">Click a marker to open that event. Years with several beats stack slightly; click again (or use the year chips) to cycle. ← → steps through the register. Yield line begins in 1703.</p>
+    </div>
+    <article class="card" id="card" aria-live="polite">
+      <div class="card-top">
+        <div class="ev-year" id="evYear"></div>
+        <div class="ev-no" id="evNo"></div>
+      </div>
+      <div class="ev-cat" id="evCat"></div>
+      <h2 class="ev-label" id="evLabel"></h2>
+      <p class="ev-sum" id="evSum"></p>
+      <div class="year-cycle" id="yearCycle" hidden></div>
+      <div class="stats">
+        <div class="stat"><span>Consol / long yield</span><b id="stYield"></b></div>
+        <div class="stat"><span>Bank Rate</span><b id="stBank"></b></div>
+      </div>
+      <div class="nav">
+        <button type="button" id="prev">← Previous</button>
+        <button type="button" id="next">Next →</button>
+      </div>
+      <p class="ai-note">Editorial draft summaries. Images later. Series: BoE Millennium via FRED.</p>
+    </article>
+  </div>
+
+  <section class="register" aria-labelledby="regTitle">
+    <div class="reg-head">
+      <h2 id="regTitle">All ${EVENTS.length} events</h2>
+      <input id="q" type="search" placeholder="Search events, e.g. Newton, Peel, gold" aria-label="Search events">
+    </div>
+    <div class="decades" id="list"></div>
+  </section>
+
+  <section class="about">
+    <h2>About this ledger</h2>
+    <p>A separate site from the Dow timeline — three centuries of the Bank of England ending at the tricentenary in 1994. The primary graph is <strong>linear yield %</strong>, not a log stock index. Busy years carry up to four beats (South Sea, Restriction, Peel’s Act, Black Wednesday, and so on).</p>
+    <p>Companion: <a href="https://julianlee314-hue.github.io/dow-timeline/v0.2/">The Dow, 1896–2016 (v0.2)</a> — where the American equity story picks up near where this gilt/consol century closes its Victorian quiet.</p>
+  </section>
+
+  <footer>
+    <p>Long yield: FRED <a href="https://fred.stlouisfed.org/series/LTCYUKA">LTCYUKA</a> (BoE Millennium). Bank Rate: FRED <a href="https://fred.stlouisfed.org/series/BOERUKA">BOERUKA</a>. After consols cease being the sole benchmark, the line is still the long UK government yield family.</p>
+    <p>Events are an editorial draft for checking; see <a href="CREDITS.md">CREDITS.md</a>. No archive images in v0.</p>
+  </footer>`;
+
+  let era = 0, sel = 0, showBank = false, query = "";
+  const activeCat = new Set(CATS.map(c => c.key));
+  const activeKind = new Set(KINDS.map(k => k.key));
+  const hashN = /^#e(\d{1,3})$/.exec(location.hash);
+  if (hashN) {
+    const i = EVENTS.findIndex(e => e.n === +hashN[1]);
+    if (i >= 0) sel = i;
+  }
+
+  const erasEl = document.getElementById("eras");
+  ERAS.forEach((e, i) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = e.name;
+    b.setAttribute("aria-pressed", i === era);
+    b.onclick = () => { era = i; erasEl.querySelectorAll(".chip").forEach((c, j) => c.setAttribute("aria-pressed", j === i)); draw(true); };
+    erasEl.appendChild(b);
+  });
+  document.getElementById("showBank").onchange = e => { showBank = e.target.checked; draw(false); };
+
+  const catsEl = document.getElementById("cats");
+  CATS.forEach(c => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip cat"; b.id = "cat-" + c.key;
+    b.setAttribute("aria-pressed", "true");
+    b.innerHTML = `<i class="sw" style="background:${catColor(c.key)}"></i>${c.name}`;
+    b.onclick = () => {
+      if (activeCat.has(c.key) && activeCat.size === CATS.length) activeCat.clear(), activeCat.add(c.key);
+      else if (activeCat.has(c.key)) { activeCat.delete(c.key); if (!activeCat.size) CATS.forEach(x => activeCat.add(x.key)); }
+      else activeCat.add(c.key);
+      catsEl.querySelectorAll(".cat").forEach(x => x.setAttribute("aria-pressed", activeCat.has(x.id.slice(4))));
+      styleDots(); renderList();
+    };
+    catsEl.appendChild(b);
+  });
+  const kindsEl = document.getElementById("kinds");
+  KINDS.forEach(k => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip kind"; b.id = "kind-" + k.key;
+    b.setAttribute("aria-pressed", "true");
+    b.textContent = k.name;
+    b.onclick = () => {
+      if (activeKind.has(k.key) && activeKind.size === KINDS.length) activeKind.clear(), activeKind.add(k.key);
+      else if (activeKind.has(k.key)) { activeKind.delete(k.key); if (!activeKind.size) KINDS.forEach(x => activeKind.add(x.key)); }
+      else activeKind.add(k.key);
+      kindsEl.querySelectorAll(".kind").forEach(x => x.setAttribute("aria-pressed", activeKind.has(x.id.slice(5))));
+      styleDots(); renderList();
+    };
+    kindsEl.appendChild(b);
+  });
+
+  const svg = d3.select("#chart"), tip = document.getElementById("tip"), box = document.getElementById("chartBox");
+  const defs = svg.append("defs");
+  const grad = defs.append("linearGradient").attr("id", "areaGrad").attr("x1", 0).attr("x2", 0).attr("y1", 0).attr("y2", 1);
+  grad.append("stop").attr("offset", "0%").attr("stop-color", "var(--accent)").attr("stop-opacity", 0.22);
+  grad.append("stop").attr("offset", "100%").attr("stop-color", "var(--accent)").attr("stop-opacity", 0.02);
+  defs.append("clipPath").attr("id", "clip").append("rect");
+  const gGrid = svg.append("g").attr("class", "grid");
+  const gGap = svg.append("g").attr("clip-path", "url(#clip)");
+  const gPlot = svg.append("g").attr("clip-path", "url(#clip)");
+  const area = gPlot.append("path").attr("class", "area");
+  const line = gPlot.append("path").attr("class", "yield");
+  const bankLine = gPlot.append("path").attr("class", "bank").attr("visibility", "hidden");
+  const selLine = gPlot.append("line").attr("class", "sel-line");
+  const hoverLine = gPlot.append("line").attr("class", "hover-line").attr("visibility", "hidden");
+  const gDots = svg.append("g").attr("clip-path", "url(#clip)");
+  const selRing = svg.append("circle").attr("class", "sel-ring").attr("clip-path", "url(#clip)");
+  const gX = svg.append("g").attr("class", "axis");
+  const gY = svg.append("g").attr("class", "axis");
+  const hit = svg.append("rect").attr("fill", "transparent").style("cursor", "crosshair");
+
+  let x, y, W, H, m;
+  function visible(e) { return activeCat.has(e.cat) && activeKind.has(e.kind); }
+  function yieldAt(year) {
+    if (consolMap.has(year)) return consolMap.get(year);
+    // nearest consol for stacking pre-1703 markers near first yield
+    return consol[0] ? consol[0][1] : 5;
+  }
+  function eventXY(e) {
+    const baseY = e.v != null ? e.v : yieldAt(e.year);
+    const sibs = e.siblings.length;
+    const offset = sibs > 1 ? (e.sibIndex - (sibs - 1) / 2) * 0.35 : 0;
+    return [e.year + offset * 0.15, baseY + offset];
+  }
+
+  function draw(animate) {
+    const [x0, x1] = ERAS[era].d;
+    const rect = box.getBoundingClientRect();
+    W = Math.max(320, rect.width);
+    H = Math.min(520, Math.max(300, W * 0.48));
+    m = { t: 18, r: 18, b: 36, l: 48 };
+    svg.attr("viewBox", `0 0 ${W} ${H}`);
+    defs.select("#clip rect").attr("x", m.l).attr("y", m.t).attr("width", W - m.l - m.r).attr("height", H - m.t - m.b);
+    x = d3.scaleLinear().domain([x0, x1]).range([m.l, W - m.r]);
+    const yMax = d3.max([
+      d3.max(consol.filter(d => d[0] >= x0 && d[0] <= x1), d => d[1]) || 10,
+      showBank ? (d3.max(bankRate.filter(d => d[0] >= x0 && d[0] <= x1), d => d[1]) || 0) : 0
+    ]);
+    y = d3.scaleLinear().domain([0, Math.ceil(yMax * 1.08)]).nice().range([H - m.b, m.t]);
+
+    gGrid.selectAll("*").remove();
+    gY.call(d3.axisLeft(y).ticks(6).tickSize(-(W - m.l - m.r)).tickFormat(d => d + "%"))
+      .attr("transform", `translate(${m.l},0)`);
+    gY.selectAll(".tick line").attr("stroke", "var(--rule)");
+    gY.select(".domain").remove();
+    gX.call(d3.axisBottom(x).ticks(Math.min(10, Math.round(x1 - x0) / 20)).tickFormat(d3.format("d")))
+      .attr("transform", `translate(0,${H - m.b})`);
+    gX.select(".domain").remove();
+
+    gGap.selectAll("*").remove();
+    if (x0 < 1703) {
+      gGap.append("rect").attr("class", "gap-band")
+        .attr("x", x(x0)).attr("y", m.t)
+        .attr("width", Math.max(0, x(Math.min(1703, x1)) - x(x0)))
+        .attr("height", H - m.t - m.b);
+      if (x1 > 1696) gGap.append("text").attr("class", "gap-label")
+        .attr("x", x(Math.min(1698.5, (x0 + Math.min(1703, x1)) / 2)))
+        .attr("y", m.t + 16).text("yield from 1703");
+    }
+
+    const consolVis = consol.filter(d => d[0] >= x0 && d[0] <= x1);
+    const lineGen = d3.line().x(d => x(d[0])).y(d => y(d[1])).curve(d3.curveMonotoneX);
+    const areaGen = d3.area().x(d => x(d[0])).y0(H - m.b).y1(d => y(d[1])).curve(d3.curveMonotoneX);
+    const t = animate && !window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 400 : 0;
+    area.datum(consolVis).transition().duration(t).attr("d", areaGen);
+    line.datum(consolVis).transition().duration(t).attr("d", lineGen);
+    if (showBank) {
+      const bVis = bankRate.filter(d => d[0] >= x0 && d[0] <= x1);
+      bankLine.attr("visibility", "visible").datum(bVis).transition().duration(t).attr("d", lineGen);
+    } else bankLine.attr("visibility", "hidden");
+
+    const dots = gDots.selectAll("circle").data(EVENTS, d => d.n);
+    dots.join(
+      enter => enter.append("circle").attr("class", "dot").attr("r", 5)
+        .attr("fill", d => catColor(d.cat))
+        .attr("cx", d => x(eventXY(d)[0])).attr("cy", d => y(eventXY(d)[1]))
+        .on("click", (ev, d) => { ev.stopPropagation(); select(EVENTS.indexOf(d)); })
+        .on("mouseenter", (ev, d) => showTip(ev, d))
+        .on("mouseleave", hideTip),
+      update => update.transition().duration(t)
+        .attr("cx", d => x(eventXY(d)[0])).attr("cy", d => y(eventXY(d)[1]))
+        .attr("fill", d => catColor(d.cat))
+    );
+    styleDots();
+    hit.attr("x", m.l).attr("y", m.t).attr("width", W - m.l - m.r).attr("height", H - m.t - m.b)
+      .on("mousemove", onMove).on("mouseleave", () => hoverLine.attr("visibility", "hidden"))
+      .on("click", onClick);
+    updateSelectionGraphics();
+  }
+
+  function styleDots() {
+    gDots.selectAll("circle")
+      .classed("dim", d => !visible(d))
+      .attr("r", d => EVENTS[sel] && d.n === EVENTS[sel].n ? 7 : (d.siblings.length > 1 ? 5.5 : 5));
+  }
+  function updateSelectionGraphics() {
+    const e = EVENTS[sel];
+    if (!e) return;
+    const [ex, ey] = eventXY(e);
+    selLine.attr("x1", x(ex)).attr("x2", x(ex)).attr("y1", m.t).attr("y2", H - m.b);
+    selRing.attr("cx", x(ex)).attr("cy", y(ey)).attr("r", 11);
+  }
+  function showTip(ev, d) {
+    const [ex, ey] = eventXY(d);
+    tip.hidden = false;
+    const more = d.siblings.length > 1 ? ` · ${d.sibIndex + 1}/${d.siblings.length} in ${d.year}` : "";
+    tip.innerHTML = `<b>${d.year}</b>${more}<div class="t-ev">${d.label}</div><div class="t-ev">${fmtPct(d.v)} consol · ${fmtPct(d.bank)} Bank Rate</div>`;
+    const rect = box.getBoundingClientRect();
+    let left = x(ex) + 12, top = y(ey) - 10;
+    if (left + 200 > rect.width) left = x(ex) - 212;
+    tip.style.left = left + "px"; tip.style.top = Math.max(0, top) + "px";
+  }
+  function hideTip() { tip.hidden = true; }
+  function onMove(ev) {
+    const [mx] = d3.pointer(ev);
+    const yr = Math.round(x.invert(mx));
+    hoverLine.attr("visibility", "visible").attr("x1", x(yr)).attr("x2", x(yr)).attr("y1", m.t).attr("y2", H - m.b);
+  }
+  function onClick(ev) {
+    const [mx] = d3.pointer(ev);
+    const yr = Math.round(x.invert(mx));
+    const inYear = EVENTS.filter(e => e.year === yr && visible(e));
+    if (inYear.length) {
+      const cur = EVENTS[sel];
+      if (cur && cur.year === yr) {
+        const next = inYear[(inYear.findIndex(e => e.n === cur.n) + 1) % inYear.length];
+        select(EVENTS.indexOf(next));
+      } else select(EVENTS.indexOf(inYear[0]));
+    } else {
+      let best = -1, bestD = 1e9;
+      EVENTS.forEach((e, i) => {
+        if (!visible(e)) return;
+        const d = Math.abs(e.year - yr);
+        if (d < bestD) { bestD = d; best = i; }
+      });
+      if (best >= 0) select(best);
+    }
+  }
+
+  function select(i) {
+    if (i < 0 || i >= EVENTS.length) return;
+    sel = i;
+    const e = EVENTS[sel];
+    document.getElementById("evYear").textContent = e.year;
+    document.getElementById("evNo").innerHTML = `#${e.n}<br>${e.siblings.length > 1 ? `${e.sibIndex + 1} of ${e.siblings.length} in ${e.year}` : ""}`;
+    document.getElementById("evCat").innerHTML = `<i class="sw" style="background:${catColor(e.cat)}"></i>${catName(e.cat)} <span class="badge">${e.kind}</span>`;
+    document.getElementById("evLabel").textContent = e.label;
+    document.getElementById("evSum").textContent = e.summary;
+    document.getElementById("stYield").textContent = e.v != null ? fmtPct(e.v) : (e.year < 1703 ? "pre-series" : "—");
+    document.getElementById("stBank").textContent = fmtPct(e.bank);
+    document.getElementById("prev").disabled = sel === 0;
+    document.getElementById("next").disabled = sel === EVENTS.length - 1;
+    const yc = document.getElementById("yearCycle");
+    if (e.siblings.length > 1) {
+      yc.hidden = false;
+      yc.innerHTML = e.siblings.map(s => `<button type="button" aria-current="${s.n === e.n}" data-n="${s.n}">${s.sibIndex + 1}. ${s.label.slice(0, 28)}${s.label.length > 28 ? "…" : ""}</button>`).join("");
+      yc.querySelectorAll("button").forEach(b => b.onclick = () => select(EVENTS.findIndex(x => x.n === +b.dataset.n)));
+    } else yc.hidden = true;
+    history.replaceState(null, "", "#e" + e.n);
+    styleDots();
+    updateSelectionGraphics();
+    renderList();
+  }
+
+  document.getElementById("prev").onclick = () => select(sel - 1);
+  document.getElementById("next").onclick = () => select(sel + 1);
+  window.addEventListener("keydown", ev => {
+    if (ev.key === "ArrowLeft") { ev.preventDefault(); select(sel - 1); }
+    if (ev.key === "ArrowRight") { ev.preventDefault(); select(sel + 1); }
+  });
+  document.getElementById("q").oninput = e => { query = e.target.value.trim().toLowerCase(); renderList(); };
+
+  function renderList() {
+    const list = document.getElementById("list");
+    const q = query;
+    const filtered = EVENTS.filter(e => {
+      if (!visible(e)) return false;
+      if (!q) return true;
+      return (e.label + " " + e.summary + " " + e.cat + " " + e.kind + " " + e.year).toLowerCase().includes(q);
+    });
+    if (!filtered.length) { list.innerHTML = `<p class="empty">No events match.</p>`; return; }
+    const decades = d3.groups(filtered, d => Math.floor(d.year / 10) * 10);
+    list.innerHTML = decades.map(([dec, rows]) => `
+      <div class="decade">
+        <h3>${dec}s</h3>
+        ${rows.map(e => `
+          <button type="button" class="row" aria-current="${EVENTS[sel] && EVENTS[sel].n === e.n}" data-i="${EVENTS.indexOf(e)}">
+            <span class="r-n">${e.n}</span>
+            <span class="r-y">${e.year}</span>
+            <i class="sw" style="background:${catColor(e.cat)}"></i>
+            <span>${e.label}</span>
+            <span class="r-k">${e.kind}</span>
+          </button>`).join("")}
+      </div>`).join("");
+    list.querySelectorAll(".row").forEach(b => b.onclick = () => select(+b.dataset.i));
+  }
+
+  window.addEventListener("resize", () => draw(false));
+  draw(false);
+  select(sel);
+}
+</script>
+</body>
+</html>
