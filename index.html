@@ -141,6 +141,18 @@ footer p { margin: 0; }
 footer a { color: var(--ink-2); }
 .loading, .error { font-family: var(--f-mono); color: var(--muted); padding: 40px 0; }
 .error { color: var(--neg); }
+
+#chart .monarchs rect { stroke: var(--bg); stroke-width: 2; cursor: pointer; }
+#chart .monarchs .odd { fill: var(--accent-soft); }
+#chart .monarchs .even { fill: var(--band); }
+#chart .monarchs text { fill: var(--ink-2); font-family: var(--f-body); font-size: 10.5px; pointer-events: none; }
+#chart .monarchs .cur { fill: var(--ink); }
+#chart .monarchs text.cur-name { fill: var(--bg); font-weight: 600; }
+#chart .monarchs text.cur-name.out { fill: var(--ink); }
+.mon-card { position: absolute; z-index: 3; width: min(280px, calc(100% - 8px)); background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; box-shadow: 0 10px 28px rgb(0 0 0 / 0.16); pointer-events: none; }
+.mon-card .mc-name { font-family: var(--f-display); font-size: var(--step-1); line-height: 1.2; }
+.mon-card .mc-meta { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.04em; color: var(--muted); margin-top: 3px; }
+.ev-mon { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--muted); margin: 0; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
@@ -172,6 +184,29 @@ const ERAS = [
   { name: "1844–1914", d: [1844, 1914.5] },
   { name: "1914–1994", d: [1914, 1994.5] }
 ];
+
+const MONARCHS = [
+  ["William III", 1694, 1702.17, "1694–1702"],
+  ["Anne", 1702.17, 1714.58, "1702–1714"],
+  ["George I", 1714.58, 1727.44, "1714–1727"],
+  ["George II", 1727.44, 1760.81, "1727–1760"],
+  ["George III", 1760.81, 1820.08, "1760–1820"],
+  ["George IV", 1820.08, 1830.48, "1820–1830"],
+  ["William IV", 1830.48, 1837.48, "1830–1837"],
+  ["Victoria", 1837.48, 1901.08, "1837–1901"],
+  ["Edward VII", 1901.08, 1910.36, "1901–1910"],
+  ["George V", 1910.36, 1936.08, "1910–1936"],
+  ["Edward VIII", 1936.08, 1936.94, "1936"],
+  ["George VI", 1936.94, 1952.13, "1936–1952"],
+  ["Elizabeth II", 1952.13, 1994.5, "1952–1994"]
+];
+const MON_ABBREV = {
+  "William III": "Wm III", "William IV": "Wm IV",
+  "George I": "Geo I", "George II": "Geo II", "George III": "Geo III",
+  "George IV": "Geo IV", "George V": "Geo V", "George VI": "Geo VI",
+  "Edward VII": "Ed VII", "Edward VIII": "Ed VIII",
+  "Elizabeth II": "Eliz. II", "Anne": "Anne", "Victoria": "Victoria"
+};
 
 const catColor = k => `var(--c-${k})`;
 const catName = k => (CATS.find(c => c.key === k) || { name: k }).name;
@@ -228,7 +263,8 @@ function boot(EVENTS, SERIES) {
     <div class="chart-box" id="chartBox">
       <svg id="chart" role="img" aria-label="Long UK government yield percent from 1703 to 1994 with clickable events from 1694"></svg>
       <div class="tip" id="tip" hidden></div>
-      <p class="hint">Click a marker to open that event. Years with several beats stack slightly; click again (or use the year chips) to cycle. ← → steps through the register. Yield line begins in 1703.</p>
+      <div class="mon-card" id="monCard" hidden><div class="mc-name" id="mcName"></div><div class="mc-meta" id="mcMeta"></div></div>
+      <p class="hint">Click a marker to open that event. Years with several beats stack slightly; click again (or use the year chips) to cycle. The strip under the axis is British monarchs (head of state). ← → steps through the register. Yield line begins in 1703.</p>
     </div>
     <article class="card" id="card" aria-live="polite">
       <div class="card-top">
@@ -237,6 +273,7 @@ function boot(EVENTS, SERIES) {
       </div>
       <div class="ev-cat" id="evCat"></div>
       <h2 class="ev-label" id="evLabel"></h2>
+      <p class="ev-mon" id="evMon"></p>
       <p class="ev-sum" id="evSum"></p>
       <div class="year-cycle" id="yearCycle" hidden></div>
       <div class="stats">
@@ -338,9 +375,59 @@ function boot(EVENTS, SERIES) {
   const selRing = svg.append("circle").attr("class", "sel-ring").attr("clip-path", "url(#clip)");
   const gX = svg.append("g").attr("class", "axis");
   const gY = svg.append("g").attr("class", "axis");
+  const gMon = svg.append("g").attr("class", "monarchs").attr("clip-path", "url(#clipP)");
+  defs.append("clipPath").attr("id", "clipP").append("rect");
   const hit = svg.append("rect").attr("fill", "transparent").style("cursor", "crosshair");
+  const monCard = document.getElementById("monCard");
 
   let x, y, W, H, m;
+  const nameW = {};
+  function textW(s) {
+    if (nameW[s]) return nameW[s];
+    const tmp = svg.append("text").attr("class", "measure").style("font", "10.5px " + getComputedStyle(document.body).getPropertyValue("--f-body").trim()).text(s);
+    const w = tmp.node().getComputedTextLength() || s.length * 6.2;
+    tmp.remove();
+    return (nameW[s] = w);
+  }
+  function monarchIndexAt(year) {
+    const t = year + 0.5;
+    return MONARCHS.findIndex(m => t >= m[1] && t < m[2]);
+  }
+  function monarchAt(year) {
+    const m = MONARCHS[monarchIndexAt(year)];
+    return m || null;
+  }
+  function monLayout(lo0, hi0) {
+    return MONARCHS.map((d, i) => {
+      const a = Math.max(x(d[1]), lo0), b = Math.min(x(d[2]), hi0), w = b - a;
+      if (w <= 0) return { d, i, show: false };
+      const cx = (a + b) / 2;
+      const full = d[0], abbr = MON_ABBREV[d[0]] || d[0];
+      let label = null;
+      if (w > textW(full) * 1.05 + 8) label = full;
+      else if (w > textW(abbr) * 1.05 + 8) label = abbr;
+      return { d, i, show: true, cx, label };
+    });
+  }
+  function showMon(i, ev) {
+    const d = MONARCHS[i];
+    if (!d) return;
+    document.getElementById("mcName").textContent = d[0];
+    document.getElementById("mcMeta").textContent = d[3] + " · Head of state";
+    monCard.hidden = false;
+    const bw = box.getBoundingClientRect().width, cw = monCard.offsetWidth, ch = monCard.offsetHeight;
+    const [px, py] = d3.pointer(ev, box);
+    monCard.style.left = Math.min(bw - cw - 4, Math.max(4, px - cw / 2)) + "px";
+    monCard.style.top = Math.max(0, py - ch - 12) + "px";
+    tip.hidden = true;
+  }
+  function hideMon() { monCard.hidden = true; }
+  function markMonarch() {
+    const e = EVENTS[sel];
+    const mi = e ? monarchIndexAt(e.year) : -1;
+    gMon.selectAll("rect").classed("cur", o => o.i === mi);
+    gMon.selectAll("text").classed("cur-name", o => o.i === mi);
+  }
   function visible(e) { return activeCat.has(e.cat) && activeKind.has(e.kind); }
   function yieldAt(year) {
     if (consolMap.has(year)) return consolMap.get(year);
@@ -358,11 +445,12 @@ function boot(EVENTS, SERIES) {
     const [x0, x1] = ERAS[era].d;
     const rect = box.getBoundingClientRect();
     W = Math.max(320, rect.width);
-    H = Math.min(520, Math.max(300, W * 0.48));
-    m = { t: 18, r: 18, b: 36, l: 48 };
+    m = { t: 18, r: 18, b: 62, l: 48 };
+    H = Math.min(560, Math.max(320, W * 0.48)) + (m.b - 36);
     svg.attr("viewBox", `0 0 ${W} ${H}`);
-    defs.select("#clip rect").attr("x", m.l).attr("y", m.t).attr("width", W - m.l - m.r).attr("height", H - m.t - m.b);
     x = d3.scaleLinear().domain([x0, x1]).range([m.l, W - m.r]);
+    defs.select("#clip rect").attr("x", m.l).attr("y", m.t).attr("width", W - m.l - m.r).attr("height", H - m.t - m.b);
+    defs.select("#clipP rect").attr("x", 0).attr("y", H - m.b).attr("width", W).attr("height", m.b);
     const yMax = d3.max([
       d3.max(consol.filter(d => d[0] >= x0 && d[0] <= x1), d => d[1]) || 10,
       showBank ? (d3.max(bankRate.filter(d => d[0] >= x0 && d[0] <= x1), d => d[1]) || 0) : 0
@@ -413,6 +501,30 @@ function boot(EVENTS, SERIES) {
         .attr("fill", d => catColor(d.cat))
     );
     styleDots();
+
+    // Monarchs strip under the x-axis
+    const py = H - m.b + 28;
+    const lay = monLayout(m.l, W - m.r);
+    const ps = gMon.selectAll("g").data(lay);
+    const pe = ps.enter().append("g");
+    pe.append("rect");
+    pe.append("text").attr("text-anchor", "middle");
+    const pm = pe.merge(ps);
+    pm.attr("visibility", o => o.show ? "visible" : "hidden");
+    pm.select("rect").attr("class", (o, i) => (o.i % 2 ? "odd" : "even"));
+    pm.select("rect")
+      .attr("x", o => x(o.d[1])).attr("width", o => Math.max(0, x(o.d[2]) - x(o.d[1])))
+      .attr("y", py).attr("height", 22).attr("rx", 3);
+    pm.select("text").text(o => o.label || "")
+      .attr("x", o => o.cx).attr("y", py + 15)
+      .attr("visibility", o => o.label ? "visible" : "hidden");
+    pm.style("cursor", "pointer")
+      .on("mouseenter", (ev, o) => showMon(o.i, ev))
+      .on("mousemove", (ev, o) => showMon(o.i, ev))
+      .on("mouseleave", hideMon)
+      .on("click", (ev, o) => { ev.stopPropagation(); showMon(o.i, ev); });
+    markMonarch();
+
     hit.attr("x", m.l).attr("y", m.t).attr("width", W - m.l - m.r).attr("height", H - m.t - m.b)
       .on("mousemove", onMove).on("mouseleave", () => hoverLine.attr("visibility", "hidden"))
       .on("click", onClick);
@@ -476,6 +588,8 @@ function boot(EVENTS, SERIES) {
     document.getElementById("evNo").innerHTML = `#${e.n}<br>${e.siblings.length > 1 ? `${e.sibIndex + 1} of ${e.siblings.length} in ${e.year}` : ""}`;
     document.getElementById("evCat").innerHTML = `<i class="sw" style="background:${catColor(e.cat)}"></i>${catName(e.cat)} <span class="badge">${e.kind}</span>`;
     document.getElementById("evLabel").textContent = e.label;
+    const mon = monarchAt(e.year);
+    document.getElementById("evMon").textContent = mon ? ("Monarch: " + mon[0]) : "";
     document.getElementById("evSum").textContent = e.summary;
     document.getElementById("stYield").textContent = e.v != null ? fmtPct(e.v) : (e.year < 1703 ? "pre-series" : "—");
     document.getElementById("stBank").textContent = fmtPct(e.bank);
@@ -490,6 +604,7 @@ function boot(EVENTS, SERIES) {
     history.replaceState(null, "", "#e" + e.n);
     styleDots();
     updateSelectionGraphics();
+    markMonarch();
     renderList();
   }
 

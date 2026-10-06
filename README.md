@@ -12,6 +12,7 @@ Companion Dow site (1896→): https://julianlee314-hue.github.io/dow-timeline/v0
 - Primary chart: UK long-term / consol gilt yield % (FRED `LTCYUKA`, 1703–1994)
 - Compare toggle: Bank Rate (FRED `BOERUKA`, 1694–1994)
 - Searchable register, category + kind filters, era zoom
+- British monarchs strip under the chart (head of state, 1694–1994)
 - **No images yet** — event cards are text-only; archive plates come later
 
 ## Local preview
