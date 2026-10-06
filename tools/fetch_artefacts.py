@@ -53,7 +53,7 @@ def info_for(titles):
     if not titles:
         return []
     d = get(CM, {"action": "query", "titles": "|".join(titles[:20]), "prop": "imageinfo",
-                 "iiprop": "url|mime|size|extmetadata", "iiurlwidth": 800})
+                 "iiprop": "url|mime|size|extmetadata", "iiurlwidth": 960})
     return d.get("query", {}).get("pages", [])
 
 
@@ -105,7 +105,7 @@ def from_wiki(title):
 def from_search(q):
     d = get(CM, {"action": "query", "generator": "search", "gsrsearch": q + " filetype:bitmap",
                  "gsrnamespace": 6, "gsrlimit": 10, "prop": "imageinfo",
-                 "iiprop": "url|mime|size|extmetadata", "iiurlwidth": 800})
+                 "iiprop": "url|mime|size|extmetadata", "iiurlwidth": 960})
     pages = sorted(d.get("query", {}).get("pages", []), key=lambda p: p.get("index", 99))
     for p in pages:
         u = usable(p)
@@ -114,11 +114,28 @@ def from_search(q):
     return None
 
 
+STANDARD_TW = {20,40,60,120,250,330,500,960,1280,1920,3840}
+
+def sanitize_thumb(url):
+    """Force Commons hotlink to a standard thumbnail step width."""
+    import re as _re
+    m = _re.search(r"/(\d+)px-", url or "")
+    if not m:
+        return url
+    w = int(m.group(1))
+    if w in STANDARD_TW:
+        return url
+    # round up to next standard step
+    for step in sorted(STANDARD_TW):
+        if step >= w:
+            return _re.sub(r"/\d+px-", f"/{step}px-", url, count=1)
+    return _re.sub(r"/\d+px-", "/960px-", url, count=1)
+
 def download(url, path):
     if os.path.exists(path) and os.path.getsize(path) > 2000:
         return True
     tmp = path + ".src"
-    for i in range(6):
+    for i in range(3):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             with urllib.request.urlopen(req, timeout=90) as r, open(tmp, "wb") as f:
@@ -135,7 +152,7 @@ def download(url, path):
     try:
         from PIL import Image
         im = Image.open(tmp).convert("RGB")
-        im.thumbnail((800, 800))
+        im.thumbnail((960, 960))
         im.save(path, "JPEG", quality=78, optimize=True, progressive=True)
     except Exception:
         os.replace(tmp, path)
@@ -165,7 +182,7 @@ def main():
     if only:
         keys = [k for k in keys if k in only]
     for n in keys:
-        if n in manifest and manifest[n].get("items") and not only:
+        if n in manifest and manifest[n].get("items"):
             print(n, "skip (have", len(manifest[n]["items"]), ")")
             continue
         entry = {"items": [], "missed": []}
@@ -173,17 +190,20 @@ def main():
             entry["quote"] = plan[n]["quote"]
         for k, (kind, src) in enumerate(plan[n]["items"]):
             hit = resolve(src)
-            time.sleep(2.5)
-            if not hit or hit["file"] in seen:
+            time.sleep(4.0)
+            if not hit:
+                entry["missed"].append(src)
+                continue
+            # Allow same Commons file on multiple events (separate local copies).
+            used_here = {a.get("commons") for a in entry["items"]}
+            if hit["file"] in used_here:
                 entry["missed"].append(src)
                 continue
             fn = f"{int(n):03d}-{k + 1}.jpg"
-            if not download(hit["thumb"], os.path.join(IMG, fn)):
+            if not download(sanitize_thumb(hit["thumb"]), os.path.join(IMG, fn)):
                 entry["missed"].append(src)
                 continue
-            seen.add(hit["file"])
             hit.update({"img": "img/" + fn, "type": kind, "source": src})
-            # Drop raw commons file title from public manifest key clash — keep commons title as commons
             hit["commons"] = hit.pop("file")
             entry["items"].append(hit)
         manifest[n] = entry

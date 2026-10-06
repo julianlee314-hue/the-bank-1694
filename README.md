@@ -14,7 +14,7 @@ Companion Dow site (1896→): https://julianlee314-hue.github.io/dow-timeline/v0
 - Searchable register, category + kind filters, era zoom
 - British monarchs strip under the chart (head of state, 1694–1994)
 - **Monarch portraits** — hover/tap the strip under the chart for portrait + blunt blurb (`mon/`)
-- **Event archive plates** — Wikimedia Commons images on the detail card when available (`img/`, `data/artefacts.json`)
+- **Event archive plates** — Wikimedia Commons images on the detail card (`img/`, `data/artefacts.json`; 212/212 events)
 
 ## Local preview
 
