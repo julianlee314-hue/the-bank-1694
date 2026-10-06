@@ -149,9 +149,28 @@ footer a { color: var(--ink-2); }
 #chart .monarchs .cur { fill: var(--ink); }
 #chart .monarchs text.cur-name { fill: var(--bg); font-weight: 600; }
 #chart .monarchs text.cur-name.out { fill: var(--ink); }
-.mon-card { position: absolute; z-index: 3; width: min(280px, calc(100% - 8px)); background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px 12px; box-shadow: 0 10px 28px rgb(0 0 0 / 0.16); pointer-events: none; }
-.mon-card .mc-name { font-family: var(--f-display); font-size: var(--step-1); line-height: 1.2; }
-.mon-card .mc-meta { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.04em; color: var(--muted); margin-top: 3px; }
+.mon-card { position: absolute; z-index: 3; display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; width: min(340px, calc(100% - 8px)); background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 10px; box-shadow: 0 10px 28px rgb(0 0 0 / 0.16); pointer-events: none; }
+.mc-photo { width: 76px; aspect-ratio: 4 / 5; border-radius: 4px; overflow: hidden; background: var(--band); display: grid; place-items: center; }
+.mc-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mc-photo span { font-family: var(--f-display); font-size: 1.5rem; color: var(--ink-2); }
+.mc-body { display: grid; gap: 3px; align-content: start; min-width: 0; }
+.mc-name { font-family: var(--f-display); font-size: var(--step-1); line-height: 1.2; }
+.mc-meta { font-family: var(--f-mono); font-size: 0.7rem; letter-spacing: 0.04em; color: var(--muted); }
+.mc-note { margin: 2px 0 0; font-size: var(--step--1); line-height: 1.4; color: var(--ink-2); }
+.plate { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.plate-frame { position: relative; background: var(--ink); border-radius: 4px; overflow: hidden; display: grid; place-items: center; aspect-ratio: 4 / 3; max-width: 100%; cursor: zoom-in; border: 0; padding: 0; width: 100%; }
+.plate-frame img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.plate-frame .badge { position: absolute; left: 8px; top: 8px; font-family: var(--f-mono); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; background: var(--panel); color: var(--ink); padding: 3px 7px; border-radius: 3px; }
+.plate .credit { font-size: 0.72rem; color: var(--muted); }
+.plate .credit a { color: var(--ink-2); }
+.thumbs { display: flex; gap: 6px; flex-wrap: wrap; }
+.thumbs button { width: 52px; height: 40px; padding: 0; border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; cursor: pointer; background: var(--band); }
+.thumbs button[aria-current="true"] { border-color: var(--ink); outline: 1px solid var(--ink); }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#lightbox { position: fixed; inset: 0; z-index: 40; background: rgb(0 0 0 / 0.86); display: grid; place-items: center; padding: 24px; }
+#lightbox[hidden] { display: none !important; }
+#lightbox img { max-width: min(1100px, 100%); max-height: 90vh; object-fit: contain; }
+#lightbox button { position: absolute; top: 16px; right: 16px; background: var(--panel); color: var(--ink); border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; font: 500 var(--step--1) var(--f-body); }
 .ev-mon { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--muted); margin: 0; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -186,19 +205,19 @@ const ERAS = [
 ];
 
 const MONARCHS = [
-  ["William III", 1694, 1702.17, "1694–1702"],
-  ["Anne", 1702.17, 1714.58, "1702–1714"],
-  ["George I", 1714.58, 1727.44, "1714–1727"],
-  ["George II", 1727.44, 1760.81, "1727–1760"],
-  ["George III", 1760.81, 1820.08, "1760–1820"],
-  ["George IV", 1820.08, 1830.48, "1820–1830"],
-  ["William IV", 1830.48, 1837.48, "1830–1837"],
-  ["Victoria", 1837.48, 1901.08, "1837–1901"],
-  ["Edward VII", 1901.08, 1910.36, "1901–1910"],
-  ["George V", 1910.36, 1936.08, "1910–1936"],
-  ["Edward VIII", 1936.08, 1936.94, "1936"],
-  ["George VI", 1936.94, 1952.13, "1936–1952"],
-  ["Elizabeth II", 1952.13, 1994.5, "1952–1994"]
+  ["William III", 1694, 1702.17, "1694–1702", "Dutch soldier-king who took England in 1688. The Bank of England was chartered to fund his endless war with Louis XIV — war finance dressed as a private company."],
+  ["Anne", 1702.17, 1714.58, "1702–1714", "Last Stuart on the throne. Oversaw the Act of Union, buried seventeen children or pregnancies that failed, and left the crown to a German cousin she barely knew."],
+  ["George I", 1714.58, 1727.44, "1714–1727", "Elector of Hanover who spoke little English and preferred his German court. Whig ministers ran the shop; the South Sea Bubble blew up on his watch."],
+  ["George II", 1727.44, 1760.81, "1727–1760", "Last British king to lead troops in battle (Dettingen). His reign bankrolled the Seven Years’ War — the expensive birth certificate of a global empire."],
+  ["George III", 1760.81, 1820.08, "1760–1820", "Lost the American colonies, fought Revolutionary and Napoleonic France, and spent long stretches incapacitated by illness. The Restriction Period suspended gold for his wars."],
+  ["George IV", 1820.08, 1830.48, "1820–1830", "Former Regent, spendthrift dandy, builder of Brighton Pavilion. Widely mocked; left a glittering culture and a sour personal reputation."],
+  ["William IV", 1830.48, 1837.48, "1830–1837", "‘Sailor King’ who reigned briefly between George IV’s excess and Victoria’s marathon. The Reform Act of 1832 happened under him, not because of him."],
+  ["Victoria", 1837.48, 1901.08, "1837–1901", "Empress of India and face of industrial-imperial high noon. Sixty-three years on the throne; decades of widowhood; the pound’s gold-standard century wore her profile."],
+  ["Edward VII", 1901.08, 1910.36, "1901–1910", "Playboy prince who waited forever for the job. Short Edwardian sunset of clubs, cigars, and Entente — then the lights started going out in Europe."],
+  ["George V", 1910.36, 1936.08, "1910–1936", "Wartime king who dumped the German dynastic name for Windsor. Held the line through WWI, the General Strike, and the first radio Christmas broadcast."],
+  ["Edward VIII", 1936.08, 1936.94, "1936", "Abdicated after months for Wallis Simpson. Later Nazi-adjacent exile; the shortest modern reign and the messiest exit."],
+  ["George VI", 1936.94, 1952.13, "1936–1952", "Reluctant king with a stammer who steadied the monarchy through WWII. Shared rationing optics while the Bank financed total war and then nationalisation."],
+  ["Elizabeth II", 1952.13, 1994.5, "1952–1994", "Through 1994 here: decolonisation, decimalisation, oil shocks, Big Bang, and Black Wednesday. One face over the Bank’s late-modern half-century."]
 ];
 const MON_ABBREV = {
   "William III": "Wm III", "William IV": "Wm IV",
@@ -218,14 +237,18 @@ async function loadJSON(path) {
   return r.json();
 }
 
-Promise.all([loadJSON("data/events.json"), loadJSON("data/series.json")])
-  .then(([EVENTS, SERIES]) => boot(EVENTS, SERIES))
+Promise.all([
+  loadJSON("data/events.json"),
+  loadJSON("data/series.json"),
+  loadJSON("data/artefacts.json").catch(() => ({}))
+])
+  .then(([EVENTS, SERIES, ARTEFACTS]) => boot(EVENTS, SERIES, ARTEFACTS))
   .catch(err => {
     document.getElementById("boot").className = "error";
     document.getElementById("boot").textContent = "Could not load data/ via fetch. Serve over http (python3 -m http.server) or open on GitHub Pages. " + err.message;
   });
 
-function boot(EVENTS, SERIES) {
+function boot(EVENTS, SERIES, ARTEFACTS) {
   const consol = SERIES.consol;
   const bankRate = SERIES.bankRate;
   const consolMap = new Map(consol.map(d => [d[0], d[1]]));
@@ -263,8 +286,8 @@ function boot(EVENTS, SERIES) {
     <div class="chart-box" id="chartBox">
       <svg id="chart" role="img" aria-label="Long UK government yield percent from 1703 to 1994 with clickable events from 1694"></svg>
       <div class="tip" id="tip" hidden></div>
-      <div class="mon-card" id="monCard" hidden><div class="mc-name" id="mcName"></div><div class="mc-meta" id="mcMeta"></div></div>
-      <p class="hint">Click a marker to open that event. Years with several beats stack slightly; click again (or use the year chips) to cycle. The strip under the axis is British monarchs (head of state). ← → steps through the register. Yield line begins in 1703.</p>
+      <div class="mon-card" id="monCard" hidden><div class="mc-photo"><img id="mcImg" alt=""><span id="mcMono"></span></div><div class="mc-body"><div class="mc-name" id="mcName"></div><div class="mc-meta" id="mcMeta"></div><p class="mc-note" id="mcNote"></p></div></div>
+      <p class="hint">Click a marker to open that event. Years with several beats stack slightly; click again (or use the year chips) to cycle. The strip under the axis is British monarchs — hover or tap for a portrait and blunt note. ← → steps through the register. Yield line begins in 1703.</p>
     </div>
     <article class="card" id="card" aria-live="polite">
       <div class="card-top">
@@ -275,6 +298,11 @@ function boot(EVENTS, SERIES) {
       <h2 class="ev-label" id="evLabel"></h2>
       <p class="ev-mon" id="evMon"></p>
       <p class="ev-sum" id="evSum"></p>
+      <figure class="plate" id="plate" hidden>
+        <button type="button" class="plate-frame" id="plateBtn" aria-label="View image full size"><img id="plateImg" alt=""><span class="badge" id="plateBadge"></span></button>
+        <div class="thumbs" id="thumbs"></div>
+        <div class="credit" id="capCredit"></div>
+      </figure>
       <div class="year-cycle" id="yearCycle" hidden></div>
       <div class="stats">
         <div class="stat"><span>Consol / long yield</span><b id="stYield"></b></div>
@@ -284,7 +312,7 @@ function boot(EVENTS, SERIES) {
         <button type="button" id="prev">← Previous</button>
         <button type="button" id="next">Next →</button>
       </div>
-      <p class="ai-note">Editorial draft summaries. Images later. Series: BoE Millennium via FRED.</p>
+      <p class="ai-note">Editorial draft summaries. Portraits & plates: Wikimedia Commons (see CREDITS.md). Series: BoE Millennium via FRED.</p>
     </article>
   </div>
 
@@ -412,8 +440,15 @@ function boot(EVENTS, SERIES) {
   function showMon(i, ev) {
     const d = MONARCHS[i];
     if (!d) return;
+    const img = document.getElementById("mcImg"), mono = document.getElementById("mcMono");
+    const initials = d[0].split(" ").map(w => w[0]).join("").slice(0, 3);
+    mono.textContent = initials; mono.hidden = true; img.hidden = false;
+    img.onerror = () => { img.hidden = true; mono.hidden = false; };
+    img.src = "mon/" + String(i + 1).padStart(2, "0") + ".jpg";
+    img.alt = d[0];
     document.getElementById("mcName").textContent = d[0];
     document.getElementById("mcMeta").textContent = d[3] + " · Head of state";
+    document.getElementById("mcNote").textContent = d[4] || "";
     monCard.hidden = false;
     const bw = box.getBoundingClientRect().width, cw = monCard.offsetWidth, ch = monCard.offsetHeight;
     const [px, py] = d3.pointer(ev, box);
@@ -421,6 +456,54 @@ function boot(EVENTS, SERIES) {
     monCard.style.top = Math.max(0, py - ch - 12) + "px";
     tip.hidden = true;
   }
+
+  let artIdx = 0;
+  function niceTitle(a) {
+    return (a.objname || a.desc || a.type || "Archive plate").replace(/_/g, " ");
+  }
+  function showPlate(items, idx) {
+    const plate = document.getElementById("plate");
+    if (!items || !items.length) { plate.hidden = true; return; }
+    artIdx = Math.max(0, Math.min(idx, items.length - 1));
+    const a = items[artIdx];
+    plate.hidden = false;
+    const img = document.getElementById("plateImg");
+    img.src = a.img; img.alt = niceTitle(a);
+    document.getElementById("plateBadge").textContent = a.type || "Archive";
+    const cr = document.getElementById("capCredit");
+    cr.textContent = "";
+    const bits = [a.artist, a.date, a.license].filter(Boolean).join(" · ");
+    cr.append(bits ? bits + " · " : "");
+    if (a.page) {
+      const link = document.createElement("a");
+      link.href = a.page; link.target = "_blank"; link.rel = "noopener";
+      link.textContent = "Wikimedia Commons";
+      cr.append(link);
+    }
+    const thumbs = document.getElementById("thumbs");
+    thumbs.innerHTML = "";
+    if (items.length > 1) {
+      items.forEach((it, j) => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-current", j === artIdx ? "true" : "false");
+        b.innerHTML = `<img src="${it.img}" alt="">`;
+        b.onclick = () => showPlate(items, j);
+        thumbs.appendChild(b);
+      });
+    }
+  }
+  document.getElementById("plateBtn").onclick = () => {
+    const img = document.getElementById("plateImg");
+    if (!img.src) return;
+    document.getElementById("lbImg").src = img.src;
+    document.getElementById("lbImg").alt = img.alt;
+    document.getElementById("lightbox").hidden = false;
+  };
+  document.getElementById("lbClose").onclick = () => { document.getElementById("lightbox").hidden = true; };
+  document.getElementById("lightbox").addEventListener("click", e => {
+    if (e.target.id === "lightbox") document.getElementById("lightbox").hidden = true;
+  });
   function hideMon() { monCard.hidden = true; }
   function markMonarch() {
     const e = EVENTS[sel];
@@ -591,6 +674,8 @@ function boot(EVENTS, SERIES) {
     const mon = monarchAt(e.year);
     document.getElementById("evMon").textContent = mon ? ("Monarch: " + mon[0]) : "";
     document.getElementById("evSum").textContent = e.summary;
+    const art = (ARTEFACTS[String(e.n)] || ARTEFACTS[e.n] || {}).items || [];
+    showPlate(art, 0);
     document.getElementById("stYield").textContent = e.v != null ? fmtPct(e.v) : (e.year < 1703 ? "pre-series" : "—");
     document.getElementById("stBank").textContent = fmtPct(e.bank);
     document.getElementById("prev").disabled = sel === 0;

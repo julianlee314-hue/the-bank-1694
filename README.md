@@ -6,14 +6,15 @@ Three centuries of the Bank of England — wars, panics, gold, and the long rate
 
 Companion Dow site (1896→): https://julianlee314-hue.github.io/dow-timeline/v0.2/
 
-## What’s in v0
+## What’s here
 
 - **212** dated events (money / science / both), 1–4 per busy year
 - Primary chart: UK long-term / consol gilt yield % (FRED `LTCYUKA`, 1703–1994)
 - Compare toggle: Bank Rate (FRED `BOERUKA`, 1694–1994)
 - Searchable register, category + kind filters, era zoom
 - British monarchs strip under the chart (head of state, 1694–1994)
-- **No images yet** — event cards are text-only; archive plates come later
+- **Monarch portraits** — hover/tap the strip under the chart for portrait + blunt blurb (`mon/`)
+- **Event archive plates** — Wikimedia Commons images on the detail card when available (`img/`, `data/artefacts.json`)
 
 ## Local preview
 
@@ -23,12 +24,19 @@ python3 -m http.server 8765
 # open http://localhost:8765/
 ```
 
-Same-origin `fetch` loads `data/events.json` and `data/series.json` (needed for local file:// as well as Pages).
+Same-origin `fetch` loads `data/events.json`, `data/series.json`, and `data/artefacts.json` (needed for local file:// as well as Pages).
 
 ## Refresh series
 
 ```bash
 python3 tools/fetch_series.py
+```
+
+## Refresh event images
+
+```bash
+python3 tools/fetch_artefacts.py          # all planned
+python3 tools/fetch_artefacts.py 1 20 51  # selected event numbers
 ```
 
 ## License note

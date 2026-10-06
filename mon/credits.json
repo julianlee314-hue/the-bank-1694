@@ -1,0 +1,119 @@
+[
+ {
+  "n": 1,
+  "name": "William III",
+  "file": "mon/01.jpg",
+  "license": "Public domain",
+  "artist": "Godfrey Kneller",
+  "page": "https://commons.wikimedia.org/wiki/File:King_William_III_of_England,_(1650-1702).jpg",
+  "commons": "File:King William III of England, (1650-1702).jpg"
+ },
+ {
+  "n": 2,
+  "name": "Anne",
+  "file": "mon/02.jpg",
+  "license": "Public domain",
+  "artist": "Michael Dahl",
+  "page": "https://commons.wikimedia.org/wiki/File:Dahl,_Michael_-_Queen_Anne_-_NPG_6187.jpg",
+  "commons": "File:Anne1705.jpg"
+ },
+ {
+  "n": 3,
+  "name": "George I",
+  "file": "mon/03.jpg",
+  "license": "Public domain",
+  "artist": "Workshop of Godfrey Kneller",
+  "page": "https://commons.wikimedia.org/wiki/File:King_George_I_by_Sir_Godfrey_Kneller,_Bt_(3).jpg",
+  "commons": "File:King George I by Sir Godfrey Kneller, Bt (3).jpg"
+ },
+ {
+  "n": 4,
+  "name": "George II",
+  "file": "mon/04.jpg",
+  "license": "Public domain",
+  "artist": "Thomas Hudson",
+  "page": "https://commons.wikimedia.org/wiki/File:George_II_by_Thomas_Hudson.jpg",
+  "commons": "File:George II by Thomas Hudson.jpg"
+ },
+ {
+  "n": 5,
+  "name": "George III",
+  "file": "mon/05.jpg",
+  "license": "Public domain",
+  "artist": "Allan Ramsay",
+  "page": "https://commons.wikimedia.org/wiki/File:Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project.jpg",
+  "commons": "File:Allan Ramsay - King George III in coronation robes - Google Art Project.jpg"
+ },
+ {
+  "n": 6,
+  "name": "George IV",
+  "file": "mon/06.jpg",
+  "license": "Public domain",
+  "artist": "Thomas Lawrence",
+  "page": "https://commons.wikimedia.org/wiki/File:George_IV_1821_color.jpg",
+  "commons": "File:George IV 1821 color.jpg"
+ },
+ {
+  "n": 7,
+  "name": "William IV",
+  "file": "mon/07.jpg",
+  "license": "Public domain",
+  "artist": "Martin Archer Shee",
+  "page": "https://commons.wikimedia.org/wiki/File:William_IV.jpg",
+  "commons": "File:William IV.jpg"
+ },
+ {
+  "n": 8,
+  "name": "Victoria",
+  "file": "mon/08.jpg",
+  "license": "Public domain",
+  "artist": "Alexander Bassano",
+  "page": "https://commons.wikimedia.org/wiki/File:Queen_Victoria_by_Bassano.jpg",
+  "commons": "File:Queen Victoria by Bassano.jpg"
+ },
+ {
+  "n": 9,
+  "name": "Edward VII",
+  "file": "mon/09.jpg",
+  "license": "Public domain",
+  "artist": "Luke Fildes",
+  "page": "https://commons.wikimedia.org/wiki/File:Edward_VII_in_coronation_robes.jpg",
+  "commons": "File:Edward VII in coronation robes.jpg"
+ },
+ {
+  "n": 10,
+  "name": "George V",
+  "file": "mon/10.jpg",
+  "license": "Public domain",
+  "artist": "Bassano Ltd",
+  "page": "https://commons.wikimedia.org/wiki/File:King_George_1923_LCCN2014715558_(cropped).jpg",
+  "commons": "File:King George 1923 LCCN2014715558 (cropped).jpg"
+ },
+ {
+  "n": 11,
+  "name": "Edward VIII",
+  "file": "mon/11.jpg",
+  "license": "Public domain",
+  "artist": "Albert H Collings",
+  "page": "https://commons.wikimedia.org/wiki/File:Edward_VIII_Portrait_-_1936.jpg",
+  "commons": "File:Edward VIII Portrait - 1936.jpg"
+ },
+ {
+  "n": 12,
+  "name": "George VI",
+  "file": "mon/12.jpg",
+  "license": "Public domain",
+  "artist": "Gerald Kelly",
+  "page": "https://commons.wikimedia.org/wiki/File:King_George_VI.jpg",
+  "commons": "File:King George VI.jpg"
+ },
+ {
+  "n": 13,
+  "name": "Elizabeth II",
+  "file": "mon/13.jpg",
+  "license": "Public domain",
+  "artist": "Donald McKague",
+  "page": "https://commons.wikimedia.org/wiki/File:Queen_Elizabeth_II_official_portrait_for_1959_tour_(retouched)_(cropped)_(3-to-4_aspect_ratio).jpg",
+  "commons": "File:Queen Elizabeth II official portrait for 1959 tour (retouched) (cropped) (3-to-4 aspect ratio).jpg"
+ }
+]
