@@ -2,6 +2,8 @@
 
 Three centuries of the Bank of England — wars, panics, gold, and the long rate of money — with science and tech peppered in.
 
+Part of the **Chronographs** series — time-spine history sites that open a long line into stories.
+
 **Live:** https://julianlee314-hue.github.io/the-bank-1694/
 
 Companion Dow site (1896→): https://julianlee314-hue.github.io/dow-timeline/v0.2/
