@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="The Bank, 1694–1994: three centuries of the Bank of England — wars, panics, gold, and the long rate of money, with science and tech alongside.">
 <title>The Bank, 1694–1994 · Chronographs</title>
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -59,6 +60,8 @@ body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f
 @media (min-width: 720px) { .wrap { padding-inline: 32px; } }
 header { display: grid; gap: 6px; }
 .eyebrow { font-family: var(--f-mono); font-size: var(--step--1); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+a.kicker { display: block; width: fit-content; text-decoration: none; }
+a.kicker:hover, a.kicker:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 h1 { font-family: var(--f-display); font-weight: 500; font-size: var(--step-3); line-height: 1.02; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
 h1 em { font-style: italic; color: var(--accent); }
 .lede { margin: 4px 0 0; max-width: 72ch; color: var(--ink-2); }
@@ -169,7 +172,8 @@ footer a { color: var(--ink-2); }
 .thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
 #lightbox { position: fixed; inset: 0; z-index: 40; background: rgb(0 0 0 / 0.86); display: grid; place-items: center; padding: 24px; }
 #lightbox[hidden] { display: none !important; }
-#lightbox img { max-width: min(1100px, 100%); max-height: 90vh; object-fit: contain; }
+#lightbox img { max-width: min(1100px, 100%); max-height: 90vh; object-fit: contain; box-shadow: 0 10px 40px rgb(0 0 0 / 0.5); cursor: default; }
+#lightbox { cursor: zoom-out; }
 #lightbox button { position: absolute; top: 16px; right: 16px; background: var(--panel); color: var(--ink); border: 0; border-radius: 999px; padding: 8px 14px; cursor: pointer; font: 500 var(--step--1) var(--f-body); }
 .ev-mon { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.04em; color: var(--muted); margin: 0; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
@@ -244,8 +248,11 @@ Promise.all([
 ])
   .then(([EVENTS, SERIES, ARTEFACTS]) => boot(EVENTS, SERIES, ARTEFACTS))
   .catch(err => {
-    document.getElementById("boot").className = "error";
-    document.getElementById("boot").textContent = "Could not load data/ via fetch. Serve over http (python3 -m http.server) or open on GitHub Pages. " + err.message;
+    console.error(err);
+    let box = document.getElementById("boot");
+    if (!box) { box = document.createElement("div"); box.id = "boot"; (document.getElementById("app") || document.body).prepend(box); }
+    box.className = "error";
+    box.textContent = "Could not load or draw the chart. If opened from disk, serve over http (python3 -m http.server) or open on GitHub Pages. " + err.message;
   });
 
 function boot(EVENTS, SERIES, ARTEFACTS) {
@@ -264,7 +271,7 @@ function boot(EVENTS, SERIES, ARTEFACTS) {
   const app = document.getElementById("app");
   app.innerHTML = `
   <header>
-    <div class="eyebrow">A Chronograph</div>
+    <a class="eyebrow kicker" href="https://julianlee314-hue.github.io/chronographs/" title="All Chronographs">A Chronograph</a>
     <div class="eyebrow">Bank of England · 1694–1994 · long UK yield %</div>
     <h1>Three centuries of the Bank — <em>wars, panics, gold, and the long rate of money</em></h1>
     <p class="lede">Each marker is a beat in the Bank’s story, with science and tech peppered beside finance and geopolitics. The line is the annual long UK government / consol gilt yield (FRED LTCYUKA). Toggle Bank Rate to compare the policy rate.</p>
@@ -494,17 +501,25 @@ function boot(EVENTS, SERIES, ARTEFACTS) {
       });
     }
   }
-  document.getElementById("plateBtn").onclick = () => {
-    const img = document.getElementById("plateImg");
-    if (!img.src) return;
-    document.getElementById("lbImg").src = img.src;
-    document.getElementById("lbImg").alt = img.alt;
-    document.getElementById("lightbox").hidden = false;
-  };
-  document.getElementById("lbClose").onclick = () => { document.getElementById("lightbox").hidden = true; };
-  document.getElementById("lightbox").addEventListener("click", e => {
-    if (e.target.id === "lightbox") document.getElementById("lightbox").hidden = true;
-  });
+  // Photo lightbox: null-safe so a missing element can never stop the chart drawing.
+  const lb = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbClose = document.getElementById("lbClose");
+  const plateBtn = document.getElementById("plateBtn");
+  function closeLightbox() { if (lb) lb.hidden = true; if (lbImg) lbImg.removeAttribute("src"); }
+  if (plateBtn && lb && lbImg) {
+    plateBtn.onclick = () => {
+      const img = document.getElementById("plateImg");
+      if (!img || !img.getAttribute("src")) return;
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.hidden = false;
+      if (lbClose) lbClose.focus();
+    };
+  }
+  if (lbClose) lbClose.onclick = closeLightbox;
+  if (lb) lb.addEventListener("click", e => { if (e.target === lb) closeLightbox(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && lb && !lb.hidden) closeLightbox(); });
   function hideMon() { monCard.hidden = true; }
   function markMonarch() {
     const e = EVENTS[sel];
@@ -732,5 +747,6 @@ function boot(EVENTS, SERIES, ARTEFACTS) {
   select(sel);
 }
 </script>
+<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Image, full size"><img id="lbImg" alt=""><button id="lbClose" type="button">Close</button></div>
 </body>
 </html>
